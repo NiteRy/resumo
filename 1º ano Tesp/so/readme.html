@@ -1,0 +1,2381 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headerlink {
+  font: normal 400 16px fontawesome-mini;
+  vertical-align: middle;
+  margin-left: -16px;
+  float: left;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0;
+  color: #333;
+}
+
+.markdown-body .headerlink:focus {
+  outline: none;
+}
+
+.markdown-body h1 .headerlink {
+  margin-top: 0.8rem;
+}
+
+.markdown-body h2 .headerlink,
+.markdown-body h3 .headerlink {
+  margin-top: 0.6rem;
+}
+
+.markdown-body h4 .headerlink {
+  margin-top: 0.2rem;
+}
+
+.markdown-body h5 .headerlink,
+.markdown-body h6 .headerlink {
+  margin-top: 0;
+}
+
+.markdown-body .headerlink:hover,
+.markdown-body h1:hover .headerlink,
+.markdown-body h2:hover .headerlink,
+.markdown-body h3:hover .headerlink,
+.markdown-body h4:hover .headerlink,
+.markdown-body h5:hover .headerlink,
+.markdown-body h6:hover .headerlink {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* MultiMarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px fontawesome-mini;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\e157';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>/*GitHub*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
+</style><title>readme</title></head><body><article class="markdown-body"><h1 id="resumo-de-sistemas-operativos">Resumo de Sistemas Operativos<a class="headerlink" href="#resumo-de-sistemas-operativos" title="Permanent link"></a></h1>
+<h2 id="diogo-chanca">Diogo Chança<a class="headerlink" href="#diogo-chanca" title="Permanent link"></a></h2>
+<hr />
+<h3 id="indice">Índice<a class="headerlink" href="#indice" title="Permanent link"></a></h3>
+<ul>
+<li>
+<p>SO</p>
+</li>
+<li>
+<p>IO</p>
+</li>
+<li>
+<p>Ficheiro</p>
+</li>
+<li>
+<p>Computador</p>
+</li>
+<li>
+<p>Linux</p>
+</li>
+</ul>
+<hr />
+<h4 id="so">SO<a class="headerlink" href="#so" title="Permanent link"></a></h4>
+<p>Conjunto de programas e dados associados, no qual permite gerir e utilizar recursos
+disponíveis de um equipamento informático como um computador ou um smartphone. Alguns exemplos de Sistemas Operativos são: Windows, Mac OS e Solaris para computador e Android e iOS para smartphone.</p>
+<p>Exemplo1: Windows 10</p>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/win.png" /></p>
+<p>Exemplo2: Mac OS</p>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/mac.png" /></p>
+<hr />
+<h5 id="tipos-de-so">Tipos de SO<a class="headerlink" href="#tipos-de-so" title="Permanent link"></a></h5>
+<ul>
+<li>
+<p>Monotarefa:
+Tarefa ou processo é todo o programa em execução.
+Um sistema operativo monotarefa é um sistema onde só é possível a realização
+de uma única tarefa de cada vez.
+Desta forma, uma tarefa é executada pelo processador desde o início até ao fim.
+Trata-se de uma técnica de gestão de tarefas ineficiente e limitada.
+O sistema operativo monotarefa mais conhecido é o MS-DOS.</p>
+</li>
+<li>
+<p>Multitarefa:
+Um sistema operativo multitarefa é um sistema que tem a capacidade de
+executar vários processos em “simultâneo”.
+Trata-se de uma técnica de gestão de tarefas eficiente e moderna, conducente a
+uma boa otimização e desempenho geral do sistema.
+Exemplos de Sistemas Multitarefa populares:
+Existem vários exemplos de sistemas operativos multitarefa populares,
+normalmente desenvolvidos por diferentes fabricantes ou Instituições de
+Investigação, que criaram os seus próprios sistemas operativos, como, por
+exemplo, a Microsoft, a Apple, a Sun Microsystems (adquirida pela Oracle
+Corporation) e o UNIX (associado ao MIT).
+Abaixo listam-se alguns exemplares populares destes sistemas:
+• Solaris
+• Microsoft Windows
+• Unix/Linux e derivados
+• Apple/Macintosh</p>
+</li>
+</ul>
+<hr />
+<h5 id="sistemas-nao-preemptivos-e-preemptivos">Sistemas não Preemptivos e Preemptivos<a class="headerlink" href="#sistemas-nao-preemptivos-e-preemptivos" title="Permanent link"></a></h5>
+<p>Em computação, preempção ou preemptividade é a capacidade de um sistema
+computacional (Kernel/Processador) poder interromper temporariamente uma
+tarefa que esteja a ser executada.</p>
+<ul>
+<li>
+<p>Os Sistemas Operativos Monotarefa são por natureza não preemptivos, já que
+um processador executa um processo do início ao fim, sem interrupções.</p>
+</li>
+<li>
+<p>Por outro lado, os Sistemas Operativos Multitarefa são por natureza
+preemptivos, já que um processo em execução pode ser interrompido, por um
+determinado intervalo de tempo, conhecido por time slice ou quantum, para
+dar a vez a um outro processo, também por um determinado intervalo de tempo,
+conforme será analisado brevemente.</p>
+</li>
+</ul>
+<p>A esta troca de processos dá-se o nome de Context Switch ou Troca de Contexto.
+Os Sistemas Preemptivos têm como objetivos:
+• Executar comandos e programas do utilizador e do Sistema de uma forma
+justa e eficiente, dando uma boa oportunidade a todos os processos,
+respeitando prioridades.
+• Facilitar o acesso e uso da máquina.
+• Fornecer uma interface entre o Hardware e o utilizador.
+• Utilizar o Hardware de forma eficiente: discos, placas, memórias,
+ficheiros, etc.
+• Gerir os recursos: Processos, ficheiros, memórias e entrada e saída de
+dados(I/O)</p>
+<hr />
+<h5 id="processos">Processos<a class="headerlink" href="#processos" title="Permanent link"></a></h5>
+<p>Um processo ou tarefa é uma instância de um programa em execução.
+Funciona como um contentor ou ambiente onde existe um conjunto de recursos
+que são usados por parte do programa a ser executado dentro do ambiente.
+Este conjunto de recursos inclui tempo de CPU, memória, ficheiros e dispositivos
+de E/S, entre outros.
+Realce-se que o mesmo programa pode estar a ser executado por diferentes
+processos, por exemplo, múltiplos utilizadores.</p>
+<p>Um processo tem a seguinte constituição:
+• Código executável
+• Dados
+• Pilha de execução (Stack)
+• Heap ou GAP (espaço livre para ser usado sempre que necessário)
+• Valor do Contador de programa (PC – Program Counter)</p>
+<p>Identificação de um Processo
+Um processo pode ser identificado por diversos parâmetros, entre eles os
+seguintes:
+• Identificador:
+Um identificador único associado ao processo.</p>
+<p>• Estado:
+O estado atual do processo.</p>
+<p>• Prioridade:
+Nível de prioridade relativamente a outros processos</p>
+<p>• Programa Counter
+O endereço da próxima instrução a ser executada no programa</p>
+<p>• Ponteiros para Memória
+Ponteiros para o código do programa e dados associados ao programa</p>
+<p>• Dados de Contexto
+Dados presentes nos registos do CPU enquanto o processo está a ser
+executado.</p>
+<p>Criação e Execução dos Processos
+Um processo é criado pelo núcleo do Sistema Operativo, o Kernel, mais
+precisamente pelo Scheduler ou Escalonador de Processos, que é uma das
+funcionalidades do Kernel.
+Os processos são executados em pseudo-paralelismo.
+Pseudo-paralelismo porque o Sistema Operativo dá a ilusão ao utilizador de que
+cada processo é executado isoladamente num CPU de uma forma contínua,
+quando, na realidade, a cada processo é atribuída uma determinada fatia de
+tempo (quantum ou time slice) de execução de cada vez.
+Quando a fatia de tempo de um dado processo expira, o kernel muda o
+processamento para um outro processo com outra fatia de tempo, num
+mecanismo conhecido por comutação de processos, com base nas prioridades
+dos processos, interrupções, e de algoritmos de escalonamento a analisar
+brevemente.
+A imagem abaixo ilustra o conceito de pseudo-paralelismo. O computador é
+partilhado por 4 processos, nomeadamente processos A, B, C, e D. O processo A
+é executado durante um time slice e logo que este intervalo de tempo expire é
+comutado, dando assim a vez ao processo B. Este mecanismo continua para os
+processos C e D, repetindo-se novamente todo o processo com a chamada de
+volta do processo A para mais um intervalo de tempo de execução e assim
+sucessivamente. Com o passar do tempo e a execução completa de todos os
+quatro processos, deu-se a ilusão de que os processos foram executados em
+paralelo.</p>
+<p><img alt="sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/processo.png" /></p>
+<p>Para um SO é normal ter em execução centenas ou milhares de processos.
+Um processo pode criar um ou mais subprocessos, para incumbências
+específicas, tal como estes também podem criar os seu próprios subprocessos, 
+formando-se uma cadeia hierárquica de processos, numa relação de processos
+pais-filhos.</p>
+<p>Estados dos Processos
+Durante o seu percurso de execução, um processo percorre vários estados:</p>
+<ol>
+<li>
+<p>Novo (New)
+O processo está a ser criado, mas ainda não foi admitido no espaço dos
+processos prontos para execução. Isto significa que já foi criada uma
+estrutura (Process Control Block) para este processo, mas que ainda não
+foi carregado para a memória.</p>
+</li>
+<li>
+<p>Pronto (Ready)
+O processo está pronto a ser executado, aguardando atribuição de tempo
+de processamento de CPU.</p>
+</li>
+<li>
+<p>Em Execução (Run)
+As instruções do processo estão a ser executadas.</p>
+</li>
+<li>
+<p>Espera/Bloqueado (Waiting/Blocked)
+O processo espera por eventos ou recursos, ficando assim bloqueado.
+Por exemplo, à espera da execução de uma tarefa que requereu um
+acesso I/O, tendo sido criado um processo filho para essa execução, pelo
+que está agora a aguardar por essa resposta (do processo filho).</p>
+</li>
+<li>
+<p>Suspenso (Suspended)
+Time slice expirou. O processo foi retirado do processador pelo
+Scheduler.</p>
+</li>
+<li>
+<p>Concluído (Terminated)
+O processo terminou e os seus recursos foram libertados</p>
+</li>
+</ol>
+<p><img alt="sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/exemplo.png" /></p>
+<hr />
+<h6 id="criterios-de-processos">Critérios de Processos<a class="headerlink" href="#criterios-de-processos" title="Permanent link"></a></h6>
+<p>Há vários critérios para a análise de algoritmos de escalonamento:</p>
+<p>• Utilização da CPU:
+Deve-se maximizar a utilização da CPU. Deve variar entre 40% e 90% em
+sistemas de tempo real. Um critério de maximização.</p>
+<p>• Débito (throughput):
+Deve-se maximizar o número de processos concluídos por unidade de
+tempo. Outro critério de maximização.</p>
+<p>• Tempo de circulação (turnaround):
+Tempo que decorre entre o instante em que um processo é submetido e
+o instante em que é concluído. Critério de minimização.</p>
+<p>• Tempo de espera:
+O tempo de espera é a soma dos períodos dispendidos na ready queue.
+Critério de minimização.</p>
+<p>• Tempo de resposta: 
+Pretende-se minimizar o tempo que decorre entre a submissão dum
+pedido e o início da resposta.
+Este critério é adequado para sistemas interativos. Critério de
+minimização.</p>
+<p>Processo Table
+Todos os processos encontram-se registados numa tabela que contém toda a
+informação acerca do estado de cada processo, como por exemplo:
+a) Identificação do processo e do utilizador
+b) Prioridade
+c) Estado do processo
+d) Periféricos utilizados
+e) Ficheiros abertos.
+f) Programas em execução
+g) Diretoria (pasta onde estava)
+h) Quotas de utilização de recursos
+I) Contabilização da utilização de recursos.</p>
+<p>Processos no Arranque no Sistema Linux
+A figura abaixo, do livro do autor Andrew S. Tanenbaum – Operating Systems.
+4th.Edition, ilustra os processos envolvidos no Arranque de um Sistema Linux
+tipo.
+Processos:
+Processo 0 (Booting)
+Processo init (lança a Shell)
+Processo getty (lança os processos dos terminais)</p>
+<hr />
+<h5 id="funcoes-de-um-sistema-operativo">Funções de um Sistema Operativo<a class="headerlink" href="#funcoes-de-um-sistema-operativo" title="Permanent link"></a></h5>
+<ol>
+<li>
+<p>Entrada/Saída de Dados (E/S) – Input/Output (I/O)
+• Ler ou escrever dados em sistemas de armazenamento externo
+(Discos Rígidos, CDs, etc.).
+• Impressão de dados.
+• Comunicação com os Periféricos e a CPU (Central Processing Unit).</p>
+</li>
+<li>
+<p>Interpretação de Comandos (Shell)
+• Ler os comandos digitados pelos utilizadores, interpretá-los e
+executá-los apropriadamente.
+• Saliente-se que a Shell é um interface que pode tomar a forma de
+linha de comando ou gráfica (GUI – Graphics User Interface).</p>
+</li>
+<li>
+<p>Gestão de Ficheiros
+• Criação e Manipulação de Ficheiros
+• Armazenamento dos ficheiros em estruturas lógicas e físicas, de
+rápido acesso.
+• Controlo do uso da memória secundária.</p>
+</li>
+<li>
+<p>Segurança
+• Proteção dos ficheiros, definindo modos de acesso.
+• Proteção dos utilizadores.
+• Proteção do próprio sistema (todas as suas estruturas).</p>
+</li>
+<li>
+<p>Multitarefa – Controlo do uso do Processador – Tempo Compartilhado
+• Vários utilizadores acedendo ao computador ao mesmo tempo.
+• Vários utilizadores executando programas (processos) em tempo
+partilhado de processamento.
+• Controlo do uso do processador.</p>
+</li>
+<li>
+<p>Gestão de Memória Física – Virtual
+• Gestão da Memória Física (RAM) e Virtual (área de SWAP no Disco).
+• Criação e gestão de Páginas Virtuais (pages) e Páginas Físicas
+(frames).
+• Permutação de Processos entre as Memórias Física e Virtual.</p>
+</li>
+<li>
+<p>Comunicação
+• Comunicação com outros computadores, internamente ou por
+meios de telecomunicações.
+Contabilidade
+• O registo dos recursos usados.</p>
+</li>
+<li>
+<p>Desenvolvimento de Software
+• Ferramentas para escrever, manter e executar programas (por
+exemplo, compiladores, bibliotecas, etc.).</p>
+</li>
+<li>
+<p>Módulos de um Sistema Operativo
+Pela apresentação das funcionalidades acima, podemos considerar que
+um Sistema Operativo é constituído pelos seguintes módulos:
+• Gestão de Processos
+• Gestão da Memória Principal
+• Gestão de Ficheiros
+• Gestão de Input/output (I/O)
+• Gestão da Memória Secundária
+• Gestão de Rede
+• Proteção e Segurança do Sistema
+• Interpretação de Comandos (Shell Linha de Comandos/Gráfica)</p>
+</li>
+</ol>
+<hr />
+<h5 id="componenstes-de-1-so">Componenstes de 1 SO:<a class="headerlink" href="#componenstes-de-1-so" title="Permanent link"></a></h5>
+<ol>
+<li>
+<p>O Kernel (núcleo), em conjunto com os drivers e o firmware do dispositivo,
+fornecem o nível mais básico de controle sobre todos os dispositivos de
+hardware do computador (CPU, Memória e Devices). Este gere os acessos à 
+memória RAM e determina quais os programas com maior prioridade e quais
+os recursos do hardware a que as aplicações acedem.
+Estabelece assim uma ligação entre as Aplicações e o Hardware.</p>
+</li>
+<li>
+<p>A Rede é fundamental na maioria dos Sistemas Operativos pois permite-nos a
+ligação com outras máquina, incluindo máquinas que estão na Internet.
+Assim, computadores com Sistemas Operativos diferentes, podem participar na
+mesma rede e partilhar recursos entre eles, como impressoras, scanners, etc.</p>
+</li>
+<li>
+<p>A segurança é outra das caracteristicas fundamentais num sistema operativo
+pois deverá ter mecanismos para proteger a informação, para que os processos
+acedem as zonas de memória permitidas, etc</p>
+</li>
+<li>
+<p>A interface com o utilizador pode ser gráfica (GUI) ou linha de comandos
+(terminal). Atualmente, quase todos os Sistemas Operativos contam com uma
+interface gráfica, mas ainda é possível encontrar o terminal em muitos locais.
+Depois do arranque do computador pela BIOS), parte do sistema sistema
+operativo é carregado para a memória RAM.
+Os programas de computador, funcionam dentro do Sistema Operativo e
+passam a chamar-se processos quando executados</p>
+</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/ilu.png" /></p>
+<hr />
+<h5 id="software-livre">Software Livre<a class="headerlink" href="#software-livre" title="Permanent link"></a></h5>
+<p>O código-fonte do Kernel Linux está disponível livremente sob a licença GPL
+(GNU General Public License – Licença Pública Geral) que permite que
+qualquer pessoa possa utilizar, modificar e distribuir livremente, desde que
+não altere os termos da licença.</p>
+<hr />
+<h5 id="particao-do-disco-rigido">Partição do Disco Rígido<a class="headerlink" href="#particao-do-disco-rigido" title="Permanent link"></a></h5>
+<p>A partição de um disco rígido é uma divisão dentro de uma unidade de
+armazenamento física com seu próprio Sistema de Ficheiros. 
+Ainda que se tenha apenas um disco rígido físico conectado, o sistema tratará
+cada partição como se fosse um disco rígido independente.
+Teremos assim um disco rígido físico e vários virtuais
+Sistemas de Ficheiros
+Cria-se a partição de disco rígido quando se atribui a uma divisão do disco de
+seu próprio sistema de ficheiros, dos que há vários tipos: FAT, NTFS, FAT32,
+EXT2, etc.
+Partições primárias, estendidas e lógicas
+Além dos tipos de sistemas de ficheiros, há também três tipos de partições
+(independentes do sistema de ficheiros que se utilize). Estas podem ser
+partições primárias (as originais, um disco rígido formatado é uma partição
+primária que ocupa todo o espaço), partições estendidas ou secundárias
+(uma partição que pode conter outras partições em seu interior), e partições
+lógicas (as partições que ocupam uma parte ou a totalidade de uma
+estendida).</p>
+<hr />
+<h5 id="area-de-swap">Área de SWAP<a class="headerlink" href="#area-de-swap" title="Permanent link"></a></h5>
+<p>É uma área do Disco rígido que serve de troca de processos ou tarefas.
+Trata-se de uma memória virtual que funciona como uma extensão da
+memória RAM.
+A razão da existência da memória swap reside no fato do sistema operativo
+precisar de memória para funcionar, e se a memória acabar, o sistema falha.
+O swap fica como uma reserva de emergência caso a memória RAM acabe.
+É sempre recomendado utilizar swap, mesmo com muita memória RAM.
+Dado que o swap é mais lento que a memória RAM, se colocar swap demais
+num sistema e começar a usá-lo muito vai ganhar uma grande lentidão!
+(muita lentidão em discos convencionais e mesmo assim lentidão em discos
+SSD).</p>
+<hr />
+<h4 id="io">IO<a class="headerlink" href="#io" title="Permanent link"></a></h4>
+<ol>
+<li>Gestão I/O
+Uma das principais funções de um sistema operativo é controlo dos dispositivos
+I/O (em inglês: I/O=Input/Output ou em português: E/S = Entrada/Saída).
+Funções:
+• Enviar comandos para o dispositivos
+• Detetar interrupções
+• Gestão de erros
+• Interface entre o utilizador e o resto do sistema</li>
+<li>Categorias de I/O
+a) Block device
+A informação (data) é armazenada em blocos de tamanho fixo.
+ Cada bloco contém um endereço.
+Os blocos vão normalmente de 128 a 1024 bytes, qualquer um pode ser
+lido independentemente em relação a qualquer outro.
+Exemplos:
+Discos
+CDs
+Pen
+Fitas (bobinas)
+b) Character</li>
+</ol>
+<p>Transmite ou aceita streams (a palavra streams significa ou traduz-se por
+riachos ou braços de um rio com um bom caudal e veloz).
+A palavra streams, no contexto do Sistema I/O,significa fluxo de carateres
+(que é como um riacho de carateres).
+Exemplos:
+Terminais
+Impressoras
+Teclados
+Ecrãs</p>
+<ol start="3">
+<li>
+<p>Device Controller (driver)
+• É um adaptador
+• É uma componente eletrónica + software
+• É uma unidade I/O
+Sob a forma de:
+Componente mecânica
+ Componente eletrónica
+ Componente SW
+Os Controladores podem controlar 2, 4, 8 ou mais devices idênticos.
+O sistema operativo normalmente lida com o controller e não com o device.
+Funcionalidades:
+• Temporização e Controlo das transmissões e interrupções
+• Comunicação com a CPU
+• Comunicação com o dispositivo (periférico)
+• Transferência dos dados
+• Deteção de erros</p>
+</li>
+<li>
+<p>Disk Controller
+• Converte principalmente bits do disco, numa sequencia serial, em
+blocos e testa para erros (p.e. CRC).
+• Se não houver erros então os blocos são copiados para a memória.
+• Os controladores têm registos (buffers).
+O sistema operativo efetua operações I/O de comando através de
+comandos para os registos de controlo dos devices.
+Exemplo:
+ Caso do disco:
+Read
+ Write
+ Seek
+ Format
+ Etc.
+Muitos destes comandos têm parâmetros
+A CPU lê os registos de Controle para obter informações.</p>
+</li>
+<li>
+<p>DMA - Direct Memory Access
+Nos sistemas I/O e nos processos de transferências de data é muito usada a
+técnica de DMA (Direct Memory Access).
+DMA é assim uma via direta entre um dispositivo I/O e a Memória.
+Em DMA o CPU dá ao controlador duas coisas:
+a) Local da memória para onde transferir os dados.
+b) O número de bytes a transferir
+O controlador transfere diretamente e só no fim causa um interrupt.</p>
+</li>
+<li>
+<p>Interrupt Handlers/Vectors e Interrupt Service Routines (ISRs)
+Handlers/Vectors (simulação de um exemplo tipo):</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">Cod erro</th>
+<th align="center">Memória</th>
+<th align="center">Erro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">000000</td>
+<td align="center">300000</td>
+<td align="center">Power Failure</td>
+</tr>
+<tr>
+<td align="center">000004</td>
+<td align="center">400000</td>
+<td align="center">Reset</td>
+</tr>
+<tr>
+<td align="center">000008</td>
+<td align="center">500000</td>
+<td align="center">Address Error</td>
+</tr>
+<tr>
+<td align="center">000012</td>
+<td align="center">600000</td>
+<td align="center">Bus Error</td>
+</tr>
+<tr>
+<td align="center">000016</td>
+<td align="center">700000</td>
+<td align="center">Illegal Address</td>
+</tr>
+<tr>
+<td align="center">000020</td>
+<td align="center">800000</td>
+<td align="center">Divide By Zero</td>
+</tr>
+<tr>
+<td align="center">000024</td>
+<td align="center">&hellip;</td>
+<td align="center">&hellip;</td>
+</tr>
+</tbody>
+</table>
+<p>Interrupt Service Routines (ISRs)
+Tratamento dos Interrupts (simulação exemplo tipo):</p>
+<p>300000 Sub Power_Failure
+Código para tratamento da Falha da Fonte de
+Alimentação:
+• Salvaguarda de toda a informação a ser usada no
+recursos, tais como: registos, ficheiros, estados dos
+processos, etc.)
+• Recuo dos braços dos discos
+• Etc.
+IRET
+End Sub</p>
+<ol start="7">
+<li>Organização do Sistema I/O
+O Sistema I/O é estruturado em quatro camadas:
+a) Interrupt Handlers
+b) Device Drivers
+c) Device – independente
+d) User level Software</li>
+</ol>
+<hr />
+<h4 id="ficheiro">Ficheiro<a class="headerlink" href="#ficheiro" title="Permanent link"></a></h4>
+<p>Ficheiro
+É uma coleção de informação relacionada, identificada por um nome.
+Propriedades dos Ficheiros:
+• Nome
+• Tipo
+• Local
+• Tamanho
+• Datas (criação, última edição, etc.)
+• Dono
+• Segurança (dono, grupo e outros ou mundo)
+Operações sobre os Ficheiros
+• Criação
+• Escrita
+• Leitura
+• Eliminação
+• Cópias
+• Deslocação
+Sistema de Ficheiros
+É uma estrutura de diretórios (pastas), bem organizada, que permite armazenar, criar e
+eliminar ficheiros em diferentes formatos.
+É constituído principalmente por duas partes bem visíveis:
+1) Ficheiros (Dados)
+2) Estrutura de Diretórios
+É responsável pelas seguintes funcionalidades:
+• Criação e eliminação de ficheiros
+• Criação e eliminação de diretórios
+• Suporte das funções base para manipulação de ficheiros e diretórios
+• Mapeamento dos ficheiros (estrutura lógica) no suporte de armazenamento
+secundário (estrutura física)
+• Criação de cópias de Segurança dos ficheiros em suporte estável, não volátil
+• Gestão e manutenção das permissões de acesso aos ficheiros.
+Estrutura de Diretórios
+É uma estrutura que permite gerir e organizar o conjunto de ficheiros existentes num
+volume (disco).
+Operações desempenhadas num Diretório:
+• Pesquisa de Ficheiros
+• Criação de Ficheiros
+• Eliminação de Ficheiros
+• Listagens de conteúdos
+• Deslocação de ficheiros
+Organização dos Diretórios
+A organização mais comum e popular é em árvore com um número arbitrário de níveis.</p>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/fich.png" /></p>
+<hr />
+<h4 id="computador">Computador<a class="headerlink" href="#computador" title="Permanent link"></a></h4>
+<p>É uma máquina que tem a capacidade de manipular a informação através
+das suas unidades de processamento, memória e periféricos de entrada
+(input) e saída (output) de dados.
+As capacidades de um computador são imensas, incluindo principalmente
+armazenamento de dados, processamento de dados, cálculo em grande
+escala, desenho industrial e artístico, tratamento de imagens gráficas,
+realidade virtual, entretenimento e cultura.
+Um computador inclui também as capacidades de Aprendizagem
+Automática e de Processamento de Linguagem Natural (PLN), áreas que
+dizem respeito á Inteligência Artificial.
+Principais características de um Computador
+• Automático – manipula informação sem necessitar de intervenção
+humana.
+5
+• Universal - manipula informação que representa áreas diferentes.
+• Eletrónico – usa componentes eletrónicas para manipular a
+informação.
+• Digital – representa a informação através de dígitos binários.</p>
+<hr />
+<h5 id="elementos-fundamentais-de-uma-arquitetura">Elementos Fundamentais de uma Arquitetura<a class="headerlink" href="#elementos-fundamentais-de-uma-arquitetura" title="Permanent link"></a></h5>
+<p>Convencional de Computadores
+Um computador moderno é constituído por um ou mais processadores com
+um ou mais CPU Cores, Memória Principal (RAM, ROM, Caches, etc.),
+Memoria Secundária (Discos) e Dispositivos de Entrada e Saída, usando alta
+tecnologia, em constante evolução, formando um sistema complexo de
+interligações, funcionalidades e comunicações, com grande capacidade de
+armazenamento e processamento de informação, em alta velocidade.</p>
+<ul>
+<li>
+<p>Tipos de Componentes de um Computador
+Um computador consiste por um conjunto de três tipos de componentes:
+• Processador
+• Memória
+• I/O (Input/Output)</p>
+</li>
+<li>
+<p>Categorias de Estruturas de Interconexão (BUS) de um Computador
+Os componentes de um computador estão interligados entre si através de
+vias de interligação ou de interconexão, denominadas de barramentos ou
+BUS (inglês) e agrupadas em três categorias:
+1. Sinais de Controlo
+2. Endereços
+3. Dados
+As quais comunicam entre si, sob controlo de sinais (Read, Write, etc.)</p>
+</li>
+</ul>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/comp1.png" />
+<img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/comp2.png" /></p>
+<hr />
+<h5 id="arquitetura-de-um-computador">Arquitetura de um computador<a class="headerlink" href="#arquitetura-de-um-computador" title="Permanent link"></a></h5>
+<hr />
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/mot.png" /></p>
+<hr />
+<ol>
+<li>Motherboard - Placa-mãe
+A Motherboard de um computador é a placa existente no seu interior que
+contém um conjunto de circuitos eletrónicos, responsáveis pelo
+processamento de dados e pelas trocas de informação no interior do
+computador. sendo as placas a ela ligadas as placas
+filhas. Os condutores impressos, ou linhas, que formam os denominados
+barramentos, constituem circuitos elétricos, que transportam dados,
+endereços (localizações físicas de componentes e posições de memória) e
+sinais de controlo por todo o computador. 
+Contém como componentes principais o microprocessador e as memórias
+RAM e ROM, para além de vários circuitos integrados e slots de expansão,
+interligados entre si, através das vias de interconexão.
+As duas figuras abaixo são ilustrativas.
+A primeira figura representa um diagrama da motherboard com os slots de
+expansão.
+Diagrama da motherboard com os slots de expansão
+A segunda figura representa uma motherboard clássica tipo (independente
+do fabricante, modelo e do ano de fabrico)</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/placa.png" /></p>
+<hr />
+<ol start="2">
+<li>CPU – Unidade Central de Processamento
+É constituída minimamente pelos seguintes componentes:
+Unidade de Controlo (UC):
+• Controla a execução das instruções do programa
+• Interpreta as diferentes instruções e ativa os subcomandos
+que as executam.
+• Controla as transferências de dados (memória
+central/memória auxiliar e memória central/unidade
+aritmética e lógica).
+Unidade Aritmética e Lógica (ALU – Arithmetic Logic Unit):
+• Executa as operações aritméticas e lógicas
+Registos:
+• Um registo é uma pequena área de memória, onde cabem 8 a
+64 bits, utilizada em todas as operações efetuadas no interior
+do microprocessador (CPU)
+Outra Funcionalidade relevante da CPU:
+Tratamento de Interrupções – CPU e Interrupt Controller
+Uma das atividades principais da CPU, juntamente com o Controlador de
+Interrupções, é o Controlo e Tratamento de Interrupções, a ser analisada
+brevemente.</li>
+</ol>
+<hr />
+<ol start="3">
+<li>Chipset: componente que se divide em 2 partes: a Ponte norte (north bridge) que comunica com o processador e controla a memória e a Ponte sul (south bridge) que comunica com os periféricos, entradas (por exemplo SATA) e as portas (exemplos: USB e HDMI).</li>
+</ol>
+<hr />
+<ol start="4">
+<li>Memórias
+São todos os dispositivos que permitem a um computador guardar dados,
+temporária ou permanentemente.</li>
+</ol>
+<ul>
+<li>
+<p>ROM
+Memória permanente do computador onde estão inscritas as rotinas
+básicas de software necessárias ao arranque do computador e ao teste dos
+vários dispositivos do hardware. Um dos componentes mais importantes da
+ROM é a BIOS, conjunto de programas que viabilizam a ligação do software
+com o hardware.</p>
+</li>
+<li>
+<p>RAM
+Memória de trabalho onde são armazenados os programas e os dados que
+intervêm no processamento do computador. A sua capacidade de
+armazenamento determina a extensão dos dados e programas que podem
+residir na memória durante a execução dos programas.</p>
+</li>
+<li>
+<p>CACHE
+É uma memória muito rápida que desempenha o papel de intermediária
+entre a memória RAM e o processador. Nesta memória, são armazenadas 
+as instruções utilizadas com mais frequência. Pode aumentar
+significativamente o desempenho global do sistema.</p>
+</li>
+</ul>
+<h1 id="ram">RAM:<a class="headerlink" href="#ram" title="Permanent link"></a></h1>
+<p>Tipos:
+• SRAM - Static RAM – CACHE
+Pequena, cara, rápida e de fabrico à base de transístores.
+Aplica técnicas que tornam os acessos aos dados de uma forma
+mais rápida, aumentando assim o desempenho do
+computador.</p>
+<h2 id="informacao-para-leitura-consulta-cache">Informação para Leitura-Consulta-CACHE:<a class="headerlink" href="#informacao-para-leitura-consulta-cache" title="Permanent link"></a></h2>
+<p>“
+Na área da computação, a cache é um dispositivo de acesso
+rápido, interno a um sistema, que serve de intermediário entre
+um operador de um processo e o dispositivo de
+armazenamento ao qual esse operador acede. A vantagem
+principal na utilização de uma cache consiste em evitar o
+acesso ao dispositivo de armazenamento - que pode ser
+demorado - armazenando os dados em meios de acesso mais
+rápidos.
+O uso de memórias cache visa obter uma velocidade de acesso
+a memória próxima da velocidade de memórias mais rápidas,
+e ao mesmo tempo disponibilizar no sistema uma memória de
+grande capacidade, a um custo similar de memórias de
+semicondutores mais baratas.
+Com os avanços tecnológicos, vários tipos de cache foram
+desenvolvidos. Atualmente há cache em processadores, discos
+rígidos, sistemas, servidores, nas placas-mãe, clusters de bases
+de dados, entre outros. Qualquer dispositivo que requeira do
+utilizador uma solicitação/requisição a algum outro recurso,
+seja de rede ou local, interno ou externo a essa rede, pode
+requerer ou possuir de fábrica o recurso de cache.
+Por ser mais caro, o recurso mais rápido não pode ser usado
+para armazenar todas as informações. Sendo assim, usa-se o
+cache para armazenar apenas as informações mais 
+frequentemente usadas. Nas unidades de disco também
+conhecidas como disco rígido ou Hard Drive (HD), também
+existem chips de cache nas placas eletrónicas que os
+acompanham. Como exemplo, a unidade Samsung de 160 GB
+tem 8 MBytes de cache.
+No caso da informática, o cache é útil em vários contextos:
+• Nos casos dos processadores, em que cache disponibiliza
+alguns dados já requisitados e outros a processar;
+• No caso dos navegadores, em que as páginas são guardadas
+localmente para evitar consultas constantes à rede
+(especialmente úteis quando se navega por páginas
+estáticas);
+• No caso das redes de computadores, o acesso externo, ou à
+Internet, se dá por meio de um software que compartilha a
+conexão ou link, software este também chamado de proxy,
+que tem por função rotear as requisições a IPs externos à
+rede que se encontra, nestes proxys temos ainda um cache,
+que na verdade é uma enorme lista de todos os sites que
+foram visitados pelos usuários dos computadores desta
+rede, fazendo com isto a mesma função que os caches
+presentes nos navegadores, ou browsers, só que com a
+atribuição de servir a toda a rede e com isso aumentar a
+taxa de acerto dos proxys, minimizar o consumo do link e
+agilizar a navegação;
+• Os servidores Web também podem dispor caches
+configurados pelo administrador, que variam de tamanho
+conforme o número de page views que o servidor tem.</p>
+<h3 id="cache-com-niveis">Cache com Níveis:<a class="headerlink" href="#cache-com-niveis" title="Permanent link"></a></h3>
+<p>Com a evolução na velocidade dos dispositivos, em particular
+nos processadores, a cache foi dividida em níveis, já que a
+demanda de velocidade a memória é tão grande que são
+necessários caches grandes com velocidades altíssimas de
+transferência e baixas latências. Sendo muito difícil e caro
+construir memórias caches com essas características, elas são
+construídas em níveis que se diferem na relação tamanho X
+desempenho.</p>
+<h4 id="cache-l1">Cache L1<a class="headerlink" href="#cache-l1" title="Permanent link"></a></h4>
+<p>Uma pequena porção de memória estática presente dentro do
+processador. Em alguns tipos de processador, como o Pentium
+2, o L1 é dividido em dois níveis: dados e instruções (que
+&ldquo;dizem&rdquo; o que fazer com os dados). O primeiro processador da
+Intel a ter o cache L1 foi o i486 com 8KB. Geralmente tem entre
+16KB e 128KB; hoje já encontramos processadores com até
+16MB de cache.</p>
+<h4 id="cache-l2">Cache L2<a class="headerlink" href="#cache-l2" title="Permanent link"></a></h4>
+<p>Possuindo a Cache L1 um tamanho reduzido e não
+apresentando uma solução ideal, foi desenvolvida a cache L2,
+que contém muito mais memória que a cache L1. Ela é mais um
+caminho para que a informação requisitada não tenha que ser
+procurada na lenta memória principal. Alguns processadores
+colocam esse cache fora do processador, por questões
+económicas, pois uma cache grande implica num custo grande,
+mas há exceções, como no Pentium II, por exemplo, cujas
+caches L1 e L2 estão no mesmo cartucho, que está o
+processador. A memória cache L2 é, sobretudo, um dos
+elementos essenciais para um bom rendimento do
+processador mesmo que tenha um clock baixo. Um exemplo
+prático é o caso do Intel Itanium 9152M (para servidores) que
+tem apenas 1.6 GHz de clock interno e ganha de longe do atual
+Intel Extreme, pelo fato de possuir uma memória cache de
+24MB. Quanto mais alto é o clock do processador, mais este
+aquece e mais instável se torna. Os processadores Intel Celeron
+têm um fraco desempenho por possuir menos memória cache
+L2. Um Pentium M 730 de 1.6 GHz de clock interno, 533 MHz
+FSB e 2 MB de cache L2, tem rendimento semelhante a um Intel
+Pentium 4 2.4 GHz, aquece muito menos e torna-se muito mais
+estável e bem mais rentável do que o Intel Celeron M 440 de
+1.86 GHz de clock interno, 533 MHz FSB e 1 MB de cache L2.</p>
+<h4 id="cache-l3">Cache L3<a class="headerlink" href="#cache-l3" title="Permanent link"></a></h4>
+<p>Terceiro nível de cache de memória. Inicialmente utilizado pelo
+AMD K6-III (por apresentar o cache L2 integrado ao seu núcleo)
+utilizava o cache externo presente na placa-mãe como uma
+memória de cache adicional. Ainda é um tipo de cache raro
+devido a complexidade dos processadores atuais, com suas
+áreas chegando a milhões de transístores por micrómetros ou 
+6
+nanómetros de área. Ela será muito útil, é possível a
+necessidade futura de níveis ainda mais elevados de cache,
+como L4 e assim por diante
+”.</p>
+<h2 id="dram-dynamic-ram-ram-geral">DRAM - Dynamic RAM (RAM Geral)<a class="headerlink" href="#dram-dynamic-ram-ram-geral" title="Permanent link"></a></h2>
+<p>Vasta, barata, lenta e de fabrico normalmente à base de
+condensadores.</p>
+<h3 id="tipo-popular-de-dram">Tipo popular de DRAM:<a class="headerlink" href="#tipo-popular-de-dram" title="Permanent link"></a></h3>
+<p>SDRAM – Synchronous Dynamic RAM
+É sincronizada com o Barramento do Sistema.
+Mais exatamente, é regulada com as transições do
+Clock (Relógio) do Sistema.
+Permite assim uma operação (leitura, escrita) regulada
+e justa.</p>
+<h3 id="tipos-de-sdram">Tipos de SDRAM:<a class="headerlink" href="#tipos-de-sdram" title="Permanent link"></a></h3>
+<p>SDR SDRAM:
+Single Data Rate SDRAM
+DDR1, DDR.
+DDR SDRAM:
+Double Data Rate SDRAM
+DDR2, DDR3</p>
+<p>Informação para Leitura-Consulta-DDRs:
+“
+DDR, DDR2 e DDR3
+Depois de mais de 30 anos de história, muitos padrões e
+tecnologias, finalmente chegamos aos tipos de memórias
+presentes nos computadores atuais. No começo, eram as
+memórias DDR, que operavam com frequências de até 200
+MHz. Apesar de esse ser o clock efetivo nos chips, o valor usado
+pelo barramento do sistema é de apenas metade, ou seja, 100
+MHz.
+Assim, fica claro que a frequência do BUS não duplica, o que
+ocorre é que o dobro de dados transita simultaneamente.
+Aliás, a sigla DDR significa Double Data Rate, que significa
+Dupla Taxa de Transferência. Para entender como a taxa de
+transferência aumenta em duas vezes, basta realizar o cálculo:
+[número de bytes] x [frequência do barramento] x 2
+Do padrão DDR para o DDR2 foi um pulo fácil. Bastou adicionar
+alguns circuitos para que a taxa de dados dobrasse novamente.
+Além do aumento na largura de banda, o padrão DDR2 veio
+para economizar energia e reduzir as temperaturas. As
+memórias DDR2 mais avançadas alcançam clocks de até 1.300
+MHz (frequência DDR), ou seja, 650 MHz real.</p>
+<p>Memórias DDR1 (Fonte da imagem: Divulgação/Wikipédia - Wsky)
+E o padrão mais recente é o DDR3 que, como era de se esperar,
+tem o dobro de taxa de transferência se comparado ao DDR2.
+A tensão das memórias caiu novamente (de 1,8 V do DDR2 para
+1,5 V) e a frequência aumentou significativamente – é possível
+encontrar memórias que operam a 2.400 MHz (clock DDR)”.</p>
+<h1 id="rom">ROM:<a class="headerlink" href="#rom" title="Permanent link"></a></h1>
+<h2 id="prom">PROM<a class="headerlink" href="#prom" title="Permanent link"></a></h2>
+<p>Programmable Read Only Memory
+Podem ser gravadas através de dispositivos especiais, mas
+não podem ser mais apagadas ou alteradas.</p>
+<h2 id="eprom">EPROM<a class="headerlink" href="#eprom" title="Permanent link"></a></h2>
+<p>Erasable Programmable Read Only Memory
+Podem ser apagadas através de raios ultravioleta permitindo
+assim a sua reutilização.</p>
+<h2 id="eeprom">EEPROM<a class="headerlink" href="#eeprom" title="Permanent link"></a></h2>
+<p>Electrically Erasable Programmable Read Only Memory
+Podem alterar o seu conteúdo eletricamente, mesmo quando
+após o seu funcionamento.</p>
+<h2 id="flash">FLASH<a class="headerlink" href="#flash" title="Permanent link"></a></h2>
+<p>É uma memória semelhante à RAM, mas não é volátil.
+É uma memória de Leitura e Escrita.
+Combina assim as capacidades da ROM e da RAM.
+É uma memória cara e veloz.
+É usada, por exemplo, em:
+Pen Drives,
+MP3 Players Audio,
+PDAs – Personal Digital Assistant (computadores
+pequenos tipo agendas),
+Telemóveis, etc.</p>
+<h3 id="estudo-caso-infowester">Estudo-Caso-InfoWester<a class="headerlink" href="#estudo-caso-infowester" title="Permanent link"></a></h3>
+<p>Unidades SSD (Solid-State Drive) - FLASH
+“
+Introdução
+Memória RAM, GPU, CPU e outros componentes passaram por evoluções
+espantosas ao longo dos últimos anos. Os HDs também, principalmente no
+aspeto da quantidade de dados que podem armazenar, no entanto,
+aplicações atuais exigem dispositivos do tipo ainda mais sofisticados, que
+possam unir redução de uso do espaço físico, capacidade razoável de 
+10
+armazenamento, menor consumo de energia e durabilidade. As unidades
+ou &ldquo;discos&rdquo; Solid-State Drive (SSD) são a resposta para essa necessidade.
+Neste artigo, o InfoWester explica o que é SSD, dá uma noção sobre como
+essa tecnologia funciona e mostra quais as suas vantagens e desvantagens.
+O que é SSD?
+Como você já sabe, SSD é a sigla para Solid-State Drive, algo como &ldquo;Unidade
+de Estado Sólido&rdquo;, em português. Trata-se de um tipo de dispositivo para
+armazenamento de dados que, de certa forma, concorre com os discos
+rígidos.
+Seu nome faz alusão à inexistência de peças móveis na constituição do
+dispositivo, o que já não acontece nos HDs, que precisam de motores,
+discos e cabeçotes de leitura e gravação para funcionar.
+O termo &ldquo;Estado Sólido&rdquo; em si faz referência ao uso de material sólido para
+o transporte de sinais elétricos entre transístores, em vez de uma passagem
+baseada em tubos a vácuo, como era feito na época das válvulas.
+Em aparelhos SSD, o armazenamento é feito em um ou mais chips de
+memória, dispensando totalmente o uso de sistemas mecânicos para o seu
+funcionamento.
+Como consequência dessa característica, unidades do tipo acabam sendo
+mais económicas no consumo de energia, afinal, não precisam alimentar
+motores ou componentes semelhantes (note, no entanto, que há outras
+condições que podem elevar o consumo de energia, dependendo do
+produto).
+Essa característica também faz com que &ldquo;discos&rdquo; SSD (não se trata de um
+disco, portanto, o uso dessa denominação não é correto, mas é um termo
+muito utilizado) utilizem menos espaço físico, já que os dados são
+armazenados em chips especiais, de tamanho reduzido. Graças a isso, a
+tecnologia SSD começou a ser empregada de forma ampla em dispositivos
+portáteis, tais como netbooks, notebooks ultrafinos e tocadores de áudio
+(MP3-player).
+11
+Visão interna e externa de uma unidade SSD de 64 GB da Sandisk -
+Note que o dispositivo é composto, essencialmente, por chips
+Outra vantagem da não utilização de peças móveis está no silêncio - você
+não ouve uma unidade SSD trabalhar, tal como pode acontecer com um HD
+- e na melhor resistência física quando o dispositivo sofre quedas ou é
+balançado (o que não quer dizer que sejam indestrutíveis também). Além
+disso, dispositivos SSD pesam menos e, pelo menos na maioria dos casos,
+podem trabalhar com temperaturas mais elevadas que as que são
+suportadas pelos discos rígidos. Há ainda outra característica considerável:
+o tempo transferência de dados entre a memória RAM e unidades SSD pode
+ser muito menor.
+É claro que também há desvantagens: unidades SSD são muito mais caras
+que HDs, embora os preços possam diminuir à medida que sua utilização
+aumenta. Por causa disso - em muitos casos, também por limitações
+tecnológicas -, a grande maioria das unidades SSD oferecidas no mercado
+tem capacidade de armazenamento muito inferior, quando comparado aos
+discos rígidos que possuem a mesma faixa de preço.
+12
+Memória Flash
+A tecnologia SSD é baseada em chips especialmente preparados para
+armazenar dados, mesmo quando não há recebimento de energia. São,
+portanto, dispositivos não-voláteis. Isso significa que não é necessário usar
+baterias ou deixar o dispositivo constantemente ligado na tomada para
+manter os dados nele.
+Para que isso seja possível convencionou-se entre os fabricantes de SSD o
+uso de memórias Flash. Trata-se de um tipo de memória EEPROM* (ver
+explicação abaixo) desenvolvido pela Toshiba nos anos 1980. Os chips de
+memória Flash são parecidos com a memória RAM usada nos
+computadores, porém, ao contrário desta última, suas propriedades fazem
+com que os dados não sejam perdidos quando não há mais fornecimento
+de energia, como já informado.
+* EEPROM é um tipo de memória ROM que permite a regravação de dados,
+no entanto, ao contrário do que acontece com as memórias EPROM, os
+processos para apagar e gravar informações são feitos eletricamente,
+fazendo com que não seja necessário mover o dispositivo de seu lugar para
+um aparelho especial para que a regravação ocorra.
+Há, basicamente, dois tipos de memória Flash:
+Flash NOR (Not OR) e Flash NAND (Not AND). O nome é proveniente da
+tecnologia de mapeamento de dados de cada um. O primeiro tipo permite
+acesso às células de memória de maneira aleatória, tal como acontece com
+a RAM, mas com alta velocidade.
+Em outras palavras, o tipo NOR permite aceder dados em posições
+diferentes da memória de maneira rápida, sem necessidade de ser
+sequencial.
+O tipo NOR é usado em chips de BIOS ou firmwares desmartphones, por
+exemplo.
+13
+O tipo NAND, por sua vez, também trabalha em alta velocidade, porém faz
+acesso sequencial às células de memória e as trata em conjunto, isto é, em
+blocos de células, em vez de acedê-las de maneira individual.
+Em geral, memórias NAND também podem armazenar mais dados que
+memórias NOR, considerando blocos físicos de tamanhos equivalentes. É,
+portanto, o tipo mais barato e mais utilizado em SSD.
+Chip de memória Flash NAND da Micron
+Tecnologias Multi-Level Cell, Single-Level Cell e Die-Stacking
+Atualmente, há duas tecnologias principais que podem ser empregadas
+tanto em memórias Flash NOR quando em Flash NAND: Multi-Level
+Cell (MLC) e Single-Level Cell (SLC).
+O primeiro tipo, MLC, consiste em um processo que utiliza tensões
+diferenciadas que fazem com que uma célula de memória armazene dois
+(mais comum) ou mais bits, em vez de apenas um, como é o padrão. Graças
+à tecnologia MLC, os custos de dispositivos de armazenamento Flash se
+tornaram menores, aumentando consideravelmente a oferta de produtos
+como pendrives e tocadores de MP3 de preços mais acessíveis. Vale frisar
+que o MLC tem uma tecnologia concorrente e parecida chamada Multi-Bit
+Cell(MBC).
+14
+O tipo SLC, por sua vez, nada mais é do que as memórias Flash &ldquo;normais&rdquo;,
+isto é, que armazenam um bit em cada célula. Chips do tipo SLC,
+obviamente, são mais caros, mas isso não quer dizer que são inviáveis: em
+geral, são mais resistentes, suportando, por padrão, cerca de 100 mil
+operações de leitura e escrita por célula, contra 10 mil do MLC (esses
+números podem variar, conforme a evolução da tecnologia), e permitem
+que estas execuções sejam efetuadas em menor tempo. A tecnologia SLC é
+normalmente utilizada em dispositivos de armazenamento de alto
+desempenho.
+É importante destacar que há também uma técnica chamada DieStacking que igualmente tem o objetivo de aumentar a capacidade de
+armazenamento de memórias Flash. Para isso, os chips são &ldquo;empilhados&rdquo;.
+A ideia aqui é relativamente simples: dois ou mais chips de memória Flash
+são colocados um em cima do outro, interconectados e encapsulados,
+como se fossem um dispositivo só. A técnica Die-Stacking pode ser
+encontrada, por exemplo, nos cartões de memória microSD.
+Vale destacar que a tecnologia Flash é a mais aplicada em unidades SSD, no
+entanto, não é a única. A Gigabyte, por exemplo, lançou um produto
+chamado iRAM que pode ser entendido como um tipo de SSD. Nele, os
+dados são armazenados em um dispositivo que permite a conexão de
+pentes de memória RAM DDR. Os dados são mantidos graças a uma bateria
+recarregável. A autonomia da bateria é de aproximadamente 15 horas, um
+desvantagem considerável. Apesar disso, o dispositivo pode ser útil para
+armazenar temporariamente dados de um servidor que irá passar por
+manutenção, por exemplo.
+Formatos de SSD
+Pela abordagem que fizemos até agora, podemos entender qualquer
+dispositivo que utiliza memória Flash como sendo uma unidade SSD. Mas,
+na verdade, é mais adequado pensarmos em SSD como um tipo de
+dispositivo concorrente ao disco rígido - não podemos esquecer da palavra
+&ldquo;Drive&rdquo; no nome.
+15
+Nessa linha de pensamento, a indústria começou a fornecer unidades SSD
+como se fossem HDs, só que com chips de memória em vez de discos.
+Assim, esses dispositivos podem ser conectados em interfaces
+SATA - Serial Advanced Technology Attachment - ou IDE (PATA)
+A interface IDE (Intelligent Drive Electronics ou Integrated Drive Electronics)
+também é conhecida como ATA (Advanced Technology Attachment) ou,
+ainda, PATA (Parallel Advanced Technology Attachment).
+Trata-se de um padrão que chegou pra valer ao mercado na época da antiga
+linha de processadores 386 - por exemplo.
+Dessa forma, é possível encontrar então unidades SSD em formatos de 1,8,
+2,5 e 3,5 polegadas, tal com em HDs.
+Unidade SSD de 2,5 polegadas e interface SATA da Micron
+16
+Esses drives SSD também podem contar com uma pequena quantidade de
+memória RAM que atua como cache (ou buffer), não só para acelerar o
+acesso aos dados mais utilizados, mas também para aumentar a vida útil do
+dispositivo. E é claro: também podem ter um chip controlador (muitas vezes
+chamado de SoC, de System on a Chip) responsável por gerenciar o acesso
+aos chips de armazenamento.
+A tecnologia aplicada nos chips de memória Flash das unidades SSD pode
+variar de modelo para modelo. Como você já sabe, unidades baseadas em
+MLC são mais baratas, sendo indicadas para uso doméstico ou em
+escritórios. Unidades com chips SLC, por sua vez, são mais adequados para
+aplicações mais críticas, como um servidor de ERP, por exemplo.
+A capacidade de cada chip também pode variar, obviamente. Um dos
+principais fatores para isso é uma característica chamada miniaturalização.
+Aqui, a ideia é a de deixar os transistores que compõem o chip com o menor
+tamanho possível. Assim, pode-se armazenar mais dados sem, no entanto,
+ser necessário aumentar o tamanho físico do chip como um todo. Na época
+da publicação desta matéria, a Intel havia anunciado unidades SSD com
+chips com processo de fabricação de apenas 25 nanómetros (nm), medida
+que equivale a um milionésimo de milímetro, isto é, um milímetro dividido
+por um milhão. Em abril de 2011, a própria Intel havia anunciado uma
+tecnologia de fabricação de chips NAND com 20 nm:
+17
+A imagem, fornecida pela Intel, mostra uma comparação entre 34, 25 e 20
+nanómetros
+É interessante notar também que existem dispositivos &ldquo;híbridos&rdquo;, que
+misturam as funções de HD e SSD. Um exemplo é a linha Momentus XT,
+anunciada pela Seagate em maio de 2010. Nela, são oferecidos HDs com
+250 GB, 320 GB e 500 GB, no entanto, todos os modelos também contam
+com uma memória Flash de 4 GB. A função dessa memória extra, no
+entanto, não é a de aumentar ligeiramente a capacidade dos dispositivos,
+mas sim a de oferecer umcache (buffer) generoso, capaz de otimizar o
+desempenho da máquina, uma vez que os dados mais acessados são
+direcionados a esse buffer, dado o seu tempo de acesso reduzido.
+Ilustração que a Seagate utilizou para promover a unidade híbrida
+Momentus XT
+Por fim, vale ressaltar que há unidades SSD adaptadas para determinadas
+aplicações e, que, portanto, podem ter formatos não usuais, assim como há
+unidades SSD que utilizam interface USB ou FireWire, por exemplo,
+fazendo frente aos famosos HDs externos.
+TRIM
+18
+Quando o assunto é SSD, especialmente quando nos referimos às unidades
+mais recentes, uma característica relacionada vem ganhando cada mais
+atenção: o recurso TRIM. Ele é extremamente importante. Vamos entender
+o porquê.
+Em geral, quando você apaga um arquivo em seu sistema operacional, ele
+não é completamente eliminado. Na verdade, a área ocupada por ele é
+marcada como “livre para uso” e os dados ficam ali de maneira oculta ao
+sistema até que uma nova gravação ocorra. É por isso que muitos
+programas de recuperação de arquivos apagados acidentalmente
+conseguem ter sucesso nessa tarefa.
+Nos HDs, o espaço disponível para dados pode ser gravado e regravado sem
+maiores dificuldades. Isso é possível porque, nos discos rígidos, os dados
+são agrupados em setores de 512 bytes (saiba mais sobre isso nesta matéria
+sobre HDs), onde cada setor pode ser gravado e regravado de maneira
+independente.
+No SSD, esse processo é um pouco diferente, já que na memória Flash os
+dados são agrupados em blocos, geralmente de 512 KB, sendo que cada
+grupo é composto por várias divisões chamadas páginas, onde cada uma
+tem, usualmente, 4 KB. O problema é que esse blocos de dados não podem
+simplesmente ser gravados e, posteriormente, regravados com a mesma
+facilidade existente nos HDs. Para isso, é necessário primeiro apagar os
+dados de uma área gravada, fazendo-a retornar ao seu estado original, para
+somente depois inserir os dados novos. A questão se agrava pelo fato de
+que, geralmente, esse processo precisar abranger o bloco inteiro e não
+apenas determinadas páginas deste. Você já deve ter percebido que essa
+situação pode causar uma significativa perda de desempenho.
+19
+Uma das maneiras de lidar com isso é fazer com que o sistema operacional
+sempre utilize uma área livre do SSD. Mas essa é uma solução paliativa, uma
+vez que, mais ou cedo ou mais tarde, os blocos não utilizados serão todos
+preenchidos. O TRIM surge justamente para evitar que o usuário &ldquo;entre em
+pânico&rdquo; ao perceber que sua unidade SSD está &ldquo;sobrescrevendo&rdquo; dados e,
+consequentemente, ficando mais lenta.
+Com o TRIM, o sistema operacional é instruído a fazer uma verificação para
+“zerar” as páginas de arquivos apagados, em vez de simplesmente marcálas como “disponível para uso”, como acontece nos HDs. Assim, quando os
+blocos que passarem por esse processo tiverem que receber novos dados,
+já estarão preparados para recebê-los, como se nunca nada tivesse sido
+gravado ali. É por isso que o TRIM é tão importante. A sua função é capaz
+de evitar sérios problemas de desempenho. O único porém é que esse
+recurso precisa ser suportado tanto pelo sistema operacional quanto pela
+unidade SSD, portanto, confira sua existência ao adquirir um produto do
+tipo. O Windows 7 e versões mais recentes do kernel Linux, por exemplo,
+têm suporte ao TRIM.
+Características a se observar na escolha de uma unidade SSD
+Ao escolher uma unidade SSD, é sempre importante verificar as
+especificações do dispositivo. Uma delas está ligada ao aspecto do
+desempenho. Quantos kilobytes podem ser lidos por segundo? Quantos
+podem ser gravados nesse mesmo tempo? Tais parâmetros podem variar
+bastante de um produto para outro. É comum, por exemplo, encontrar
+unidades SSD formada por um conjunto de 10 chips de memória Flash. O
+controlador do dispositivo pode dividir um determinado arquivo em 10
+partes para que estes sejam gravados simultaneamente na unidade, 
+20
+tornando o processo de gravação como um todo mais rápido, por exemplo.
+Porém, recursos a mais ou menos podem melhorar ou piorar esse processo.
+Daí a importância de verificar esses detalhes. Felizmente, é praticamente
+regra entre os fabricantes informar a quantidade de dados que podem ser
+gravados e também lidos por segundo.
+Outro parâmetro que também pode ser observado é o IOPS (Input/Output
+Operations Per Second), que indica a quantidade estimada de operações de
+entrada e saída por segundo, tanto para leitura quanto para escrita de
+dados. Quanto maiores esses números, melhor.
+Quanto à capacidade, como já informado no texto, esta costuma ser muito
+menor quanto comparado aos HDs porque ainda se trata de um tecnologia
+cara. Por isso, não será raro encontrar situações onde um mesmo
+computador oferece, por exemplo, HD de 500 GB ou, como opção, SSD de
+apenas 128 GB. Dependendo do caso, você pode utilizar ambas as
+tecnologias: instalar o sistema operacional em um SSD para agilizar o
+desempenho e armazenar seus arquivos pessoais em um disco rígido
+convencional.
+Por fim, vale a pena checar também qual o tempo médio de durabilidade
+previsto pelo fabricante e se a unidade conta com recursos adicionais,
+como buffer, o já mencionado TRIM, a tecnologia de monitoramento
+S.M.A.R.T. (amplamente utilizada com HDs), ou até
+mesmo RoHS (Restriction of Certain Hazardous Substances), que indica que
+o fabricante não utilizou determinadas substâncias prejudiciais à saúde e
+ao meio ambiente na fabricação do produto.
+Finalizando
+21
+Muita gente se pergunta se a tecnologia SSD sinaliza o fim da era dos discos
+rígidos. É difícil dizer. Em relação à capacidade de armazenamento, os HDs
+ainda representam uma excelente relação custo-benefício, sem contar que
+esses dispositivos contam com uma média de durabilidade bastante
+satisfatória.
+Uma vez que as unidades SSD têm um custo de armazenamento muito mais
+elevado e, em muitos casos, são vistas com a desconfiança que é natural
+em tudo o que é novo, vai levar algum tempo para que os HDs percam o
+seu reinado, se é que isso vai acontecer. Mas o fato é que, inegavelmente,
+a tecnologia SSD veio para ficar
+”.</p>
+<hr />
+<ol start="5">
+<li>Controladores I/O (Input/Output – Entrada/Saída)
+• Um controlador é um interface, parte hardware e parte
+software, entre a CPU e um dispositivo periférico, como, por
+exemplo, o disco rígido, um teclado ou um monitor de vídeo.
+São assim programas e circuitos de hardware (drivers) responsáveis pela
+comunicação entre o sistema operativo do computador e o hardware ligado
+a ele.
+Além disto, combinam as velocidades entre os dispositivos que operam em
+velocidades diferentes, já que os periféricos são consideravelmente mais
+lentos do que a CPU na transferência de dados.</li>
+</ol>
+<hr />
+<ol start="6">
+<li>Registos e Circuitos de Apoio
+Entre os diversos componentes do computador, existem registos, que
+funcionam como memórias auxiliares, e circuitos eletrónicos necessários à
+boa condução dos dados, endereços e sinais.</li>
+</ol>
+<hr />
+<ol start="7">
+<li>Estruturas de Interconexão – Barramentos - BUSes
+As estruturas de interconexão, conhecidas também por barramentos ou
+por BUSes (do inglês BUS) são as vias de interligação entre os componentes.
+Agrupam-se principalmente em três categorias:
+• Dados (Barramento de Dados – Data Bus)
+É a via destinada à transmissão dos dados entre os componentes do
+computador, tanto enviados quanto recebidos.
+• Endereços (Barramento de Endereços – Address Bus)
+Designa o endereço físico de um componente ou uma posição de memória.
+• Controle (Barramento de Controle – Control Bus)
+Constituem os sinais de controle que regulam e controlam todas as
+atividades do computador. Por exemplo, o sinal Read para indicar uma
+leitura de um determinado dado de memória.</li>
+</ol>
+<hr />
+<h4 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link"></a></h4>
+<p>Processo Prático de Instalação</p>
+<ol>
+<li>
+<p>Instalação do CentOS-7-x86_64-DVD-1708, versão Linux da Red-Hat.
+Primeiramente, fazer o download de um DVD ISO e gravá-lo numa pasta do
+disco, por exemplo em D:\LINUX ISO:
+A partir da Oracle VM VirtualBox Manager, crie uma nova máquina Linux:</p>
+</li>
+<li>
+<p>Click em New</p>
+</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p1.png" /></p>
+<ol start="3">
+<li>Selecione a Memória</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p2.png" /></p>
+<ol start="4">
+<li>Selecione as seguintes opções:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p3.png" /></p>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p4.png" /></p>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p5.png" /></p>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p6.png" /></p>
+<ol start="5">
+<li>Na Virtual Box, selecione:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p7.png" /></p>
+<ol start="6">
+<li>Escolha o Drive e disco ISO:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p8.png" /></p>
+<ol start="7">
+<li>Instale CentOS 7:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p9.png" /></p>
+<ol start="8">
+<li>Selecione:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p10.png" /></p>
+<ol start="9">
+<li>Desativar o Kdump:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p11.png" /></p>
+<ol start="10">
+<li>A partir do seguinte Painel:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p12.png" /></p>
+<ol start="11">
+<li>Selecione Software Selection:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p13.png" /></p>
+<ol start="12">
+<li>Selecione o Gnome com as seguintes opçõese clique concluído:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p14.png" /></p>
+<ol start="14">
+<li>Faça as seguintes seleções:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p15.png" /></p>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p16.png" /></p>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p17.png" /></p>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p18.png" /></p>
+<ol start="15">
+<li>Pode ver o progresso da instalação em:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p19.png" /></p>
+<ol start="16">
+<li>Crie a password para o utilizador ROOT:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p20.png" /></p>
+<ol start="17">
+<li>Crie a conta do utilizador:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p21.png" /></p>
+<ol start="18">
+<li>Termine a configuração:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p22.png" /></p>
+<ol start="19">
+<li>Faça o reboot da nova máquina:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p23.png" /></p>
+<ol start="20">
+<li>Aceite a licença:</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p24.png" /></p>
+<ol start="21">
+<li>Explore o Sitema</li>
+</ol>
+<p><img alt="Sistema" src="/G:/resumo%20si/1%C2%BA%20ano%20Tesp/so/img/p25.png" /></p>
+<hr />
+<h5 id="distribuicoes-linux">Distribuições Linux<a class="headerlink" href="#distribuicoes-linux" title="Permanent link"></a></h5>
+<p>Existem muitas distribuições Linux. Cada uma delas tem finalidades
+específicas. A maioria é gratuita, mas também existem as pagas
+(normalmente usadas em empresas). No decorrer do tempo, várias
+distribuições surgiram e desapareceram. As mais populares são as
+distribuições de companhias como a Red Hat (também criadora do Fedora),
+a SuSE, a Mandriva (união da Mandrake com a Conectiva) e a Canonical
+(Ubuntu), além de projetos de comunidades como o Debian ou o Gentoo.</p>
+<hr />
+<h5 id="linux-versus-windows-10">Linux versus Windows 10<a class="headerlink" href="#linux-versus-windows-10" title="Permanent link"></a></h5>
+<p>Alguns aspetos que distinguem o Linux do Windows:
+a) Windows 10 é mais lento no hardware mais antigo;
+b) O tamanho do download do Windows 10 é muito maior do que o do
+Linux;
+c) Linux é grátis;
+Ao contrário do Winows, Linux é grátis bem como as atualizações
+E a atualização da Microsoft é paga.
+d) Linux tem muito mais aplicativos gratuitos
+e) Segurança 
+Na verdade, nenhum sistema operativo pode afirmar-se ser
+completamente isento de riscos, o fato é que o Windows é um grande
+alvo para desenvolvedores de vírus e malware.
+Há muito pouco que a Microsoft possa fazer sobre esse problema e, como
+tal, precisamos de instalar um aplicativo antivírus e um software de
+firewall que consuma a memória eo uso da CPU, bem como o fluxo
+constante de downloads necessários para manter esse software
+atualizado.
+No Linux, só precisamos ser inteligentes e manter os repositórios e evitar
+o uso do Flash da Adobe.
+O Linux, por sua própria natureza, é apenas mais seguro que o Windows.
+f) Confiabilidade
+O Windows não é tão confiável quanto o Linux.
+Os programas do Windows penduram com muitas mais facilidade.</p>
+<hr /></article></body></html>
