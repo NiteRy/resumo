@@ -454,7 +454,6 @@ BUS (inglês). Elas comunicam entre si, sob controlo de sinais (Read, Write, etc
 3. Dados.
 
 ![Sistema](img/comp1.png)
-
 ![Sistema](img/comp2.png)
 
 ---
