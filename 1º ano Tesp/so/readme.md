@@ -462,24 +462,7 @@ BUS (inglês). Elas comunicam entre si, sob controlo de sinais (Read, Write, etc
 
 ![Sistema](img/mot.png)
 
-1. Motherboard - Placa-mãe
-A Motherboard de um computador é a placa existente no seu interior que
-contém um conjunto de circuitos eletrónicos, responsáveis pelo
-processamento de dados e pelas trocas de informação no interior do
-computador. sendo as placas a ela ligadas as placas
-filhas. Os condutores impressos, ou linhas, que formam os denominados
-barramentos, constituem circuitos elétricos, que transportam dados,
-endereços (localizações físicas de componentes e posições de memória) e
-sinais de controlo por todo o computador. 
-Contém como componentes principais o microprocessador e as memórias
-RAM e ROM, para além de vários circuitos integrados e slots de expansão,
-interligados entre si, através das vias de interconexão.
-As duas figuras abaixo são ilustrativas.
-A primeira figura representa um diagrama da motherboard com os slots de
-expansão.
-Diagrama da motherboard com os slots de expansão
-A segunda figura representa uma motherboard clássica tipo (independente
-do fabricante, modelo e do ano de fabrico)
+1. Motherboard: também conhecida como Placa-mãe, a Motherboard é a placa existente no seu interior que contém um conjunto de circuitos eletrónicos, responsáveis pelo processamento de dados e pelas trocas de informação no interior do computador. Os condutores impressos denominados barramentos, constituem circuitos elétricos, que transportam dados, endereços (localizações físicas de componentes e posições de memória) e sinais de controlo por todo o computador. Contém como componentes principais o microprocessador e as memórias RAM e ROM, para além de vários circuitos integrados e slots de expansão, interligados entre si, através das vias de interconexão.
 
 ![Sistema](img/placa.png)
 
