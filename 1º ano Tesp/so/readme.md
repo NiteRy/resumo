@@ -5,7 +5,7 @@
 
 ### Índice
 
-- S O
+- SO
 
 - IO
 
@@ -34,70 +34,35 @@ Exemplo2: Mac OS
 
 ##### Tipos de SO
 
-- Monotarefa:
-Tarefa ou processo é todo o programa em execução.
-Um sistema operativo monotarefa é um sistema onde só é possível a realização
-de uma única tarefa de cada vez.
-Desta forma, uma tarefa é executada pelo processador desde o início até ao fim.
-Trata-se de uma técnica de gestão de tarefas ineficiente e limitada.
-O sistema operativo monotarefa mais conhecido é o MS-DOS.
+- Monotarefa: sistema onde só é possível a realização de uma única tarefa de cada vez. Desta forma, uma tarefa é executada pelo processador desde o início até ao fim. Trata-se de uma técnica de gestão de tarefas ineficiente e limitada. Exemplo: o MS-DOS. Também um SO monotarefa *não é preemptivo*, ou seja, não pode interromper a tarefa realizada.
 
-- Multitarefa:
-Um sistema operativo multitarefa é um sistema que tem a capacidade de
-executar vários processos em “simultâneo”.
-Trata-se de uma técnica de gestão de tarefas eficiente e moderna, conducente a
-uma boa otimização e desempenho geral do sistema.
-Exemplos de Sistemas Multitarefa populares:
-Existem vários exemplos de sistemas operativos multitarefa populares,
-normalmente desenvolvidos por diferentes fabricantes ou Instituições de
-Investigação, que criaram os seus próprios sistemas operativos, como, por
-exemplo, a Microsoft, a Apple, a Sun Microsystems (adquirida pela Oracle
-Corporation) e o UNIX (associado ao MIT).
-Abaixo listam-se alguns exemplares populares destes sistemas:
-• Solaris
-• Microsoft Windows
-• Unix/Linux e derivados
-• Apple/Macintosh
+- Multitarefa: sistema que tem a capacidade de executar vários processos em simultâneo. Trata-se de uma técnica de gestão de tarefas eficiente e moderna, conducente a uma boa otimização e desempenho geral do sistema. Exemplos: Solaris,bMicrosoft Windows, Unix/Linux e derivadose Apple/Macintosh. Também um SO multitarefa é *preemptivo*, ou seja, pode interromper a tarefa realizada através de dar um tempo a outra tarefa para ser realizada, interrompendo a tarefa anterior.
 
 ---
 
 ##### Sistemas não Preemptivos e Preemptivos
-Em computação, preempção ou preemptividade é a capacidade de um sistema
-computacional (Kernel/Processador) poder interromper temporariamente uma
-tarefa que esteja a ser executada.
 
-- Os Sistemas Operativos Monotarefa são por natureza não preemptivos, já que
-um processador executa um processo do início ao fim, sem interrupções.
+Capacidade de um sistema, através do Kernel ou Processador poder interromper temporariamente uma tarefa que esteja a ser executada. A esta troca de processos dá-se o nome de Context Switch ou Troca de Contexto. Os Sistemas Preemptivos têm como objetivos:
 
-- Por outro lado, os Sistemas Operativos Multitarefa são por natureza
-preemptivos, já que um processo em execução pode ser interrompido, por um
-determinado intervalo de tempo, conhecido por time slice ou quantum, para
-dar a vez a um outro processo, também por um determinado intervalo de tempo,
-conforme será analisado brevemente.
-
-A esta troca de processos dá-se o nome de Context Switch ou Troca de Contexto.
-Os Sistemas Preemptivos têm como objetivos:
-• Executar comandos e programas do utilizador e do Sistema de uma forma
+-Executar comandos e programas do utilizador e do Sistema de uma forma
 justa e eficiente, dando uma boa oportunidade a todos os processos,
-respeitando prioridades.
-• Facilitar o acesso e uso da máquina.
-• Fornecer uma interface entre o Hardware e o utilizador.
-• Utilizar o Hardware de forma eficiente: discos, placas, memórias,
+respeitando prioridades;
+
+-Facilitar o acesso e uso da máquina;
+
+-Fornecer uma interface entre o Hardware e o utilizador;
+
+-Utilizar o Hardware de forma eficiente: discos, placas, memórias,
 ficheiros, etc.
-• Gerir os recursos: Processos, ficheiros, memórias e entrada e saída de
+
+-Gerir os recursos: Processos, ficheiros, memórias e entrada e saída de
 dados(I/O)
 
 ---
 
 ##### Processos
 
-Um processo ou tarefa é uma instância de um programa em execução.
-Funciona como um contentor ou ambiente onde existe um conjunto de recursos
-que são usados por parte do programa a ser executado dentro do ambiente.
-Este conjunto de recursos inclui tempo de CPU, memória, ficheiros e dispositivos
-de E/S, entre outros.
-Realce-se que o mesmo programa pode estar a ser executado por diferentes
-processos, por exemplo, múltiplos utilizadores.
+Instância de um programa em execução. Funciona como um contentor ou ambiente onde existe um conjunto de recursos que são usados por parte do programa a ser executado dentro do ambiente. Este conjunto de recursos inclui tempo de CPU, memória, ficheiros e dispositivos de E/S, entre outros. Realce-se que o mesmo programa pode estar a ser executado por diferentes processos, por exemplo, múltiplos utilizadores.
 
 Um processo tem a seguinte constituição:
 • Código executável
