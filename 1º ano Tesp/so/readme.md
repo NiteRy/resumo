@@ -5,7 +5,7 @@
 
 ### Índice
 
-- S.O.
+- S O
 
 - IO
 
