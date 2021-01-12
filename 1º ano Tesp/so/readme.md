@@ -432,7 +432,7 @@ As principais características de um Computador:
 
 ##### Elementos Fundamentais de uma Arquitetura
 
-Convencional de Computadores
+- Convencional de Computadores
 Um computador moderno é constituído por um ou mais processadores com
 um ou mais CPU Cores, Memória Principal (RAM, ROM, Caches, etc.),
 Memoria Secundária (Discos) e Dispositivos de Entrada e Saída, usando alta
@@ -466,10 +466,7 @@ As quais comunicam entre si, sob controlo de sinais (Read, Write, etc.)
 
 ##### Arquitetura de um computador
 
----
 ![Sistema](img/mot.png)
-
----
 
 1. Motherboard - Placa-mãe
 A Motherboard de um computador é a placa existente no seu interior que
