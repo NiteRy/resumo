@@ -432,24 +432,20 @@ As principais características de um Computador:
 
 ##### Elementos Fundamentais de uma Arquitetura
 
-- Convencional de Computadores
-Um computador moderno é constituído por um ou mais processadores com
-um ou mais CPU Cores, Memória Principal (RAM, ROM, Caches, etc.),
-Memoria Secundária (Discos) e Dispositivos de Entrada e Saída, usando alta
-tecnologia, em constante evolução, formando um sistema complexo de
-interligações, funcionalidades e comunicações, com grande capacidade de
-armazenamento e processamento de informação, em alta velocidade.
+- Convencional de Computadores: um computador moderno é constituído por um ou mais processadores com
+um ou mais núcleos, Memória Principal (RAM, ROM, Caches, etc.), Secundária (Discos) e periféricos.
 
-- Tipos de Componentes de um Computador
-Um computador consiste por um conjunto de três tipos de componentes:
-• Processador
-• Memória
-• I/O (Input/Output)
+- Tipos de Componentes de um Computador: consiste por um conjunto de três tipos de componentes:
 
-- Categorias de Estruturas de Interconexão (BUS) de um Computador
-Os componentes de um computador estão interligados entre si através de
+1. Processador;
+
+2. Memória;
+
+3. I/O (Input/Output).
+
+- Categorias de Estruturas de Interconexão (BUS) de um Computador: estão interligados entre si através de
 vias de interligação ou de interconexão, denominadas de barramentos ou
-BUS (inglês) e agrupadas em três categorias:
+BUS (inglês). Elas comunicam entre si, sob controlo de sinais (Read, Write, etc.) e são agrupadas em três categorias:
 
 1. Sinais de Controlo;
 
@@ -457,9 +453,8 @@ BUS (inglês) e agrupadas em três categorias:
 
 3. Dados.
 
-As quais comunicam entre si, sob controlo de sinais (Read, Write, etc.)
-
 ![Sistema](img/comp1.png)
+
 ![Sistema](img/comp2.png)
 
 ---
