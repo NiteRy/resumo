@@ -460,34 +460,30 @@ BUS (inglês). Elas comunicam entre si, sob controlo de sinais (Read, Write, etc
 
 ##### Arquitetura de um computador
 
-![Sistema](img/mot.png)
-
 1. Motherboard: também conhecida como Placa-mãe, a Motherboard é a placa existente no seu interior que contém um conjunto de circuitos eletrónicos, responsáveis pelo processamento de dados e pelas trocas de informação no interior do computador. Os condutores impressos denominados barramentos, constituem circuitos elétricos, que transportam dados, endereços (localizações físicas de componentes e posições de memória) e sinais de controlo por todo o computador. Contém como componentes principais o microprocessador e as memórias RAM e ROM, para além de vários circuitos integrados e slots de expansão, interligados entre si, através das vias de interconexão.
 
-![Sistema](img/placa.png)
+![Sistema](img/mot.png)
 
 ---
 
 2. CPU – Unidade Central de Processamento
 É constituída minimamente pelos seguintes componentes:
-Unidade de Controlo (UC):
-• Controla a execução das instruções do programa
-• Interpreta as diferentes instruções e ativa os subcomandos
-que as executam.
-• Controla as transferências de dados (memória
-central/memória auxiliar e memória central/unidade
-aritmética e lógica).
-Unidade Aritmética e Lógica (ALU – Arithmetic Logic Unit):
-• Executa as operações aritméticas e lógicas
-Registos:
-• Um registo é uma pequena área de memória, onde cabem 8 a
-64 bits, utilizada em todas as operações efetuadas no interior
-do microprocessador (CPU)
-Outra Funcionalidade relevante da CPU:
-Tratamento de Interrupções – CPU e Interrupt Controller
-Uma das atividades principais da CPU, juntamente com o Controlador de
-Interrupções, é o Controlo e Tratamento de Interrupções, a ser analisada
-brevemente.
+
+1. Unidade de Controlo (UC):
+
+- Controla a execução das instruções do programa;
+
+- Interpreta as diferentes instruções e ativa os subcomandos que as executam;
+
+- Controla as transferências de dados (memória central/memória auxiliar e memória central/unidade aritmética e lógica).
+
+2. Unidade Aritmética e Lógica (ALU – Arithmetic Logic Unit):
+
+- Executa as operações aritméticas e lógicas através de registos (pequena área de memória, onde cabem 8 a 64 bits, utilizada em todas as operações efetuadas no interior
+do microprocessador (CPU));
+
+- Tratamento de Interrupções – CPU e Interrupt Controlar:  Uma das atividades principais da CPU, juntamente com o Controlador de
+Interrupções, é o Controlo e Tratamento de Interrupções, a ser analisada brevemente.
 
 ---
 
