@@ -1153,6 +1153,50 @@ leitura de um determinado dado de memória.
 
 #### Linux
 
+![Sistema](img/lin.png)
+
+Foi criado em 17 de setembro de 1991 e foi inspirado no sistema operacional Unix. Consiste num Sistema Operativo mais seguro de modo a salvaguardar os dados mais importantes. De todos os Sistemas Operativos, este é o mais seguro, mas implica saber como configurar a segurança de dados através do código Shell.
+
+---
+
+##### Distribuições Linux
+Existem muitas distribuições Linux. Cada uma delas tem finalidades
+específicas. A maioria é gratuita, mas também existem as pagas
+(normalmente usadas em empresas). No decorrer do tempo, várias
+distribuições surgiram e desapareceram. As mais populares são as
+distribuições de companhias como a Red Hat (também criadora do Fedora),
+a SuSE, a Mandriva (união da Mandrake com a Conectiva) e a Canonical
+(Ubuntu), além de projetos de comunidades como o Debian ou o Gentoo.
+
+---
+
+##### Linux versus Windows 10
+Alguns aspetos que distinguem o Linux do Windows:
+a) Windows 10 é mais lento no hardware mais antigo;
+b) O tamanho do download do Windows 10 é muito maior do que o do
+Linux;
+c) Linux é grátis;
+Ao contrário do Winows, Linux é grátis bem como as atualizações
+E a atualização da Microsoft é paga.
+d) Linux tem muito mais aplicativos gratuitos
+e) Segurança 
+Na verdade, nenhum sistema operativo pode afirmar-se ser
+completamente isento de riscos, o fato é que o Windows é um grande
+alvo para desenvolvedores de vírus e malware.
+Há muito pouco que a Microsoft possa fazer sobre esse problema e, como
+tal, precisamos de instalar um aplicativo antivírus e um software de
+firewall que consuma a memória eo uso da CPU, bem como o fluxo
+constante de downloads necessários para manter esse software
+atualizado.
+No Linux, só precisamos ser inteligentes e manter os repositórios e evitar
+o uso do Flash da Adobe.
+O Linux, por sua própria natureza, é apenas mais seguro que o Windows.
+f) Confiabilidade
+O Windows não é tão confiável quanto o Linux.
+Os programas do Windows penduram com muitas mais facilidade.
+
+---
+
 Processo Prático de Instalação
 
 1. Instalação do CentOS-7-x86_64-DVD-1708, versão Linux da Red-Hat.
@@ -1248,42 +1292,3 @@ A partir da Oracle VM VirtualBox Manager, crie uma nova máquina Linux:
 
 ![Sistema](img/p25.png)
 
----
-
-##### Distribuições Linux
-Existem muitas distribuições Linux. Cada uma delas tem finalidades
-específicas. A maioria é gratuita, mas também existem as pagas
-(normalmente usadas em empresas). No decorrer do tempo, várias
-distribuições surgiram e desapareceram. As mais populares são as
-distribuições de companhias como a Red Hat (também criadora do Fedora),
-a SuSE, a Mandriva (união da Mandrake com a Conectiva) e a Canonical
-(Ubuntu), além de projetos de comunidades como o Debian ou o Gentoo.
-
----
-
-##### Linux versus Windows 10
-Alguns aspetos que distinguem o Linux do Windows:
-a) Windows 10 é mais lento no hardware mais antigo;
-b) O tamanho do download do Windows 10 é muito maior do que o do
-Linux;
-c) Linux é grátis;
-Ao contrário do Winows, Linux é grátis bem como as atualizações
-E a atualização da Microsoft é paga.
-d) Linux tem muito mais aplicativos gratuitos
-e) Segurança 
-Na verdade, nenhum sistema operativo pode afirmar-se ser
-completamente isento de riscos, o fato é que o Windows é um grande
-alvo para desenvolvedores de vírus e malware.
-Há muito pouco que a Microsoft possa fazer sobre esse problema e, como
-tal, precisamos de instalar um aplicativo antivírus e um software de
-firewall que consuma a memória eo uso da CPU, bem como o fluxo
-constante de downloads necessários para manter esse software
-atualizado.
-No Linux, só precisamos ser inteligentes e manter os repositórios e evitar
-o uso do Flash da Adobe.
-O Linux, por sua própria natureza, é apenas mais seguro que o Windows.
-f) Confiabilidade
-O Windows não é tão confiável quanto o Linux.
-Os programas do Windows penduram com muitas mais facilidade.
-
----
