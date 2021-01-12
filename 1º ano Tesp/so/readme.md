@@ -161,6 +161,8 @@ Um processo tem a seguinte constituição:
 
 5. Valor do Contador de programa (PC – Program Counter)
 
+---
+
 ##### Identificação de um Processo
 
 Um processo pode ser identificado por diversos parâmetros, entre eles os seguintes:
@@ -175,6 +177,8 @@ Um processo pode ser identificado por diversos parâmetros, entre eles os seguin
 5. Ponteiros: da Memória Ponteiros para o código do programa e dados associados ao programa;
 
 6. Dados de Contexto: dados presentes nos registos do CPU enquanto o processo está a ser executado.
+
+---
 
 ##### Criação e Execução dos Processos
 
@@ -270,32 +274,28 @@ Os Controladores podem controlar 2, 4, 8 ou mais dispositivo idênticos. O siste
 
 - Deteção de erros.
 
-4. Disk Controller: converte principalmente bits do disco, numa sequencia serial, em blocos e testa para erros.
-• Se não houver erros então os blocos são copiados para a memória.
-• Os controladores têm registos (buffers).
-O sistema operativo efetua operações I/O de comando através de
-comandos para os registos de controlo dos devices.
-Exemplo:
- Caso do disco:
-Read
- Write
- Seek
- Format
- Etc.
-Muitos destes comandos têm parâmetros
-A CPU lê os registos de Controle para obter informações.
+4. Disk Controller: converte principalmente bits do disco, numa sequencia serial, em blocos e testa para erros. Se não houver erros, os blocos são copiados para a memória. Os controladores têm registos (buffers). O sistema operativo efetua operações I/O de comando através de
+comandos para os registos de controlo dos devices. Exemplos no caso do disco:
 
-5. DMA - Direct Memory Access
-Nos sistemas I/O e nos processos de transferências de data é muito usada a
-técnica de DMA (Direct Memory Access).
-DMA é assim uma via direta entre um dispositivo I/O e a Memória.
-Em DMA o CPU dá ao controlador duas coisas:
-a) Local da memória para onde transferir os dados.
-b) O número de bytes a transferir
-O controlador transfere diretamente e só no fim causa um interrupt.
+- Read (ler);
 
-6. Interrupt Handlers/Vectors e Interrupt Service Routines (ISRs)
-Handlers/Vectors (simulação de um exemplo tipo):
+- Write (escrever);
+
+- Seek (procurar);
+
+- Format (formatar);
+
+- Entre outros.
+
+5. DMA - Direct Memory Access 
+
+Nos sistemas I/O e nos processos de transferências de data é muito usada a técnica de DMA (Direct Memory Access). É uma via direta entre um dispositivo I/O e a Memória. O controlador transfere diretamente e só no fim causa um interrupt. O CPU dá ao controlador duas coisas:
+
+- Local da memória para onde transferir os dados; 
+
+- O número de bytes a transferir.
+
+6. Interrupt Handlers/Vectors e Interrupt Service Routines (ISRs) Handlers/Vectors (simulação de um exemplo tipo)
 
 |Cod erro|Memória|Erro|
 |:-:|:-:|:-:|
@@ -307,101 +307,131 @@ Handlers/Vectors (simulação de um exemplo tipo):
 |000020|800000|Divide By Zero|
 |000024|...|...|
 
-Interrupt Service Routines (ISRs)
-Tratamento dos Interrupts (simulação exemplo tipo):
-
-300000 Sub Power_Failure
-Código para tratamento da Falha da Fonte de
-Alimentação:
-• Salvaguarda de toda a informação a ser usada no
-recursos, tais como: registos, ficheiros, estados dos
-processos, etc.)
-• Recuo dos braços dos discos
-• Etc.
-IRET
-End Sub
-
 7. Organização do Sistema I/O
+
 O Sistema I/O é estruturado em quatro camadas:
-a) Interrupt Handlers
-b) Device Drivers
-c) Device – independente
-d) User level Software
+
+- Interrupt Handlers
+- Device Drivers
+- Device – independente
+- User level Software
+
+---
+
+##### Dispositivos I/O
+
+1. Dispositivos de Entrada: codificam a informação que entram através de dados e possam assim ser processados para o computador. Exemplos: rato, teclado, scanner, joystick, etc;
+
+2. Dispositivos de Saída: descodificam os dados em informação para que assim possam ser entendidos pelo usuário. Exemplos: Impressoras, monitores e projetores;
+
+3. Dispositivos de entrada e saída: fazem as 2 coisas em simultâneo. Exemplos: Pen Drive, CD, Disquete.
 
 ---
 
 #### Ficheiro
 
-Ficheiro
-É uma coleção de informação relacionada, identificada por um nome.
-Propriedades dos Ficheiros:
-• Nome
-• Tipo
-• Local
-• Tamanho
-• Datas (criação, última edição, etc.)
-• Dono
-• Segurança (dono, grupo e outros ou mundo)
-Operações sobre os Ficheiros
-• Criação
-• Escrita
-• Leitura
-• Eliminação
-• Cópias
-• Deslocação
-Sistema de Ficheiros
-É uma estrutura de diretórios (pastas), bem organizada, que permite armazenar, criar e
-eliminar ficheiros em diferentes formatos.
-É constituído principalmente por duas partes bem visíveis:
-1) Ficheiros (Dados)
-2) Estrutura de Diretórios
-É responsável pelas seguintes funcionalidades:
-• Criação e eliminação de ficheiros
-• Criação e eliminação de diretórios
-• Suporte das funções base para manipulação de ficheiros e diretórios
-• Mapeamento dos ficheiros (estrutura lógica) no suporte de armazenamento
-secundário (estrutura física)
-• Criação de cópias de Segurança dos ficheiros em suporte estável, não volátil
-• Gestão e manutenção das permissões de acesso aos ficheiros.
-Estrutura de Diretórios
-É uma estrutura que permite gerir e organizar o conjunto de ficheiros existentes num
-volume (disco).
-Operações desempenhadas num Diretório:
-• Pesquisa de Ficheiros
-• Criação de Ficheiros
-• Eliminação de Ficheiros
-• Listagens de conteúdos
-• Deslocação de ficheiros
-Organização dos Diretórios
-A organização mais comum e popular é em árvore com um número arbitrário de níveis.
+Coleção de informação relacionada, identificada por um nome.
+
+1. Propriedades dos Ficheiros:
+- Nome;
+
+- Tipo;
+
+- Local;
+
+- Tamanho;
+
+- Datas (criação, última edição, etc.);
+
+- Dono;
+
+- Segurança (dono, grupo e outros ou mundo).
+
+2. Operações sobre os Ficheiros:
+
+- Criação;
+
+- Escrita;
+
+- Leitura;
+
+- Eliminação;
+
+- Cópias;
+
+- Deslocação.
+
+---
+
+##### Sistema de Ficheiros
+
+Estrutura de diretórios (pastas), bem organizada, que permite armazenar, criar e eliminar ficheiros em diferentes formatos. É constituído principalmente por duas partes bem visíveis:
+
+1. Ficheiros (Dados);
+
+2. Estrutura de Diretórios: é responsável pelas seguintes funcionalidades:
+
+- Criação e eliminação de ficheiros e diretórios;
+
+- Suporte das funções base para manipulação de ficheiros e diretórios;
+
+- Mapeamento dos ficheiros (estrutura lógica) no suporte de armazenamento secundário (estrutura física);
+
+- Criação de cópias de Segurança dos ficheiros em suporte estável, não volátil;
+
+- Gestão e manutenção das permissões de acesso aos ficheiros.
+
+---
+
+##### Estrutura de Diretórios
+
+Permite gerir e organizar o conjunto de ficheiros existentes num volume (disco). A organização mais comum e popular é em árvore com um número arbitrário de níveis. Estas são as operações desempenhadas num Diretório:
+
+1. Pesquisa de Ficheiros;
+
+2. Criação de Ficheiros;
+
+3. Eliminação de Ficheiros;
+
+4. Listagens de conteúdos;
+
+5. Deslocação de ficheiros;
+
+6. Organização dos Diretórios.
 
 ![Sistema](img/fich.png)
 
 ---
 
 #### Computador
-É uma máquina que tem a capacidade de manipular a informação através
-das suas unidades de processamento, memória e periféricos de entrada
-(input) e saída (output) de dados.
-As capacidades de um computador são imensas, incluindo principalmente
-armazenamento de dados, processamento de dados, cálculo em grande
-escala, desenho industrial e artístico, tratamento de imagens gráficas,
-realidade virtual, entretenimento e cultura.
-Um computador inclui também as capacidades de Aprendizagem
-Automática e de Processamento de Linguagem Natural (PLN), áreas que
-dizem respeito á Inteligência Artificial.
-Principais características de um Computador
-• Automático – manipula informação sem necessitar de intervenção
-humana.
-5
-• Universal - manipula informação que representa áreas diferentes.
-• Eletrónico – usa componentes eletrónicas para manipular a
-informação.
-• Digital – representa a informação através de dígitos binários.
+
+É uma máquina que tem a capacidade de manipular a informação através das suas unidades de processamento, memória e periféricos de entrada
+(input) e saída (output) de dados. Pode: 
+
+- Armazenamento de dados;
+- Processamento de dados; 
+- Cálculo em grande escala;
+- Desenho industrial e artístico; 
+- Tratamento de imagens gráficas;
+- Realidade virtual;
+- Entretenimento e cultura;
+- Aprendizagem Automática e de Processamento de Linguagem Natural (PLN);
+- Entre outros.
+
+As principais características de um Computador: 
+
+1. Automático: manipula informação sem necessitar de intervenção humana;
+
+2. Universal: manipula informação que representa áreas diferentes;
+
+3. Eletrónico: usa componentes eletrónicas para manipular a informação; 
+
+4. Digital: representa a informação através de dígitos binários.
 
 ---
 
 ##### Elementos Fundamentais de uma Arquitetura
+
 Convencional de Computadores
 Um computador moderno é constituído por um ou mais processadores com
 um ou mais CPU Cores, Memória Principal (RAM, ROM, Caches, etc.),
@@ -420,9 +450,13 @@ Um computador consiste por um conjunto de três tipos de componentes:
 Os componentes de um computador estão interligados entre si através de
 vias de interligação ou de interconexão, denominadas de barramentos ou
 BUS (inglês) e agrupadas em três categorias:
-1. Sinais de Controlo
-2. Endereços
-3. Dados
+
+1. Sinais de Controlo;
+
+2. Endereços;
+
+3. Dados.
+
 As quais comunicam entre si, sob controlo de sinais (Read, Write, etc.)
 
 ![Sistema](img/comp1.png)
@@ -808,3 +842,5 @@ A partir da Oracle VM VirtualBox Manager, crie uma nova máquina Linux:
 21. Explore o Sitema
 
 ![Sistema](img/p25.png)
+
+
