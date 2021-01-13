@@ -456,6 +456,10 @@ BUS (inglês). Elas comunicam entre si, sob controlo de sinais (Read, Write, etc
 ![Sistema](img/comp1.png)
 ![Sistema](img/comp2.png)
 
+![Sistema](img/arc.png)
+
+![Sistema](img/arcl.png)
+
 ---
 
 #### Arquitetura de um computador
@@ -690,3 +694,130 @@ A partir da Oracle VM VirtualBox Manager, crie uma nova máquina Linux:
 21. Explore o Sitema
 
 ![Sistema](img/p25.png)
+
+---
+
+#### Comandos básicos linux
+
+|Nome|Função|Exemplo|
+|:-:|:-:|:-:|
+|cat|cria um ficheiro no terminal|cat f1|
+|cd|Mover entre diretórios|cd .. (vai para o diretório anterior)|
+|chmod|Altera permissões de uma pasta/ficheiro.|chmod 751 (neste exemplo,o dono pode fazer tudo, o grupo pode ler e executar e o mundo apenas pode executar) f1ch1|
+|cp|Copia ficheiros|cp f1 f2|
+|cron|Cria uma tarefa |cron 10 15 8 3 15 echo "olá" /dev/pts/0|
+|find|Procura o nome de qualquer coisa|find pasta|
+|ls|Mostra tudo o que está dentro da pasta onde está seja ficheiro como pastas|ls -l (mostra tudo em formato lista)|
+|man|Mostra como funciona o comando|man vi|
+|mkdir|cria diretório|mkdir pasta|
+|mv|move o ficheiro para outra pasta ou modifica o nome|mv f1 pasta/mv f1 file1|
+|rm|apaga ficheiro|rm f1|
+|rmdir|apaga diretório (tem de estar vazio)|rmdir pasta|
+|tar|cria um backup|tar -cvf f1.tar pasta (cria o backup)/tar -xvf f1.tar pasta (extrai o backup)|
+|vi|criaum ficheiro de tipo texto no bloco de notas|vi f1|
+
+---
+
+##### Comandos no VI
+
+|Nome|Função|
+|:-:|:-:|
+|Botão "esc"|Alterna entre modo comando e modo texto|
+|Botão "insert"|Muda para modo texto|
+|:q|Sai mas pede para guardar|
+|:wq|Sai e guarda|
+|a|Insere à direita|
+|A|Insere à direita, no fim da linha|
+|d|Corta texto selecionado|
+|i|Insere à esquerda|
+|I|Insere à esquerda, no início da linha|
+|o|Insere linha abaixo|
+|O|Insere linha acima|
+|p|Cola texto|
+|Setas de direção do teclado|move o cursor|
+|y|Copia texto|
+
+---
+
+##### Permissões Chmod
+
+|Permissão|Modo|Binário|Octal|Conta|
+|:-:|:-:|:-:|:-:|:-:|
+|Nenhum|- - -|0|0|0|
+|Execução|- - x|1|1|1|
+|Escrita|- w -|10|2|2|
+|Escrita e execução|-wx|11|3|1+2|
+|Leitura|r - -|100|4|4|
+|Leitura e execução|r-x|101|5|1+4|
+|Leitura e escrita|rw-|110|6|2+4|
+|Leitura, escrita e execução|rwx|111|7|1+2+4|
+
+|Ordem de permissão|Usuário|
+|:-:|:-:|
+|1|Dono|
+|2|Grupo|
+|3|Mundo|
+
+---
+
+##### Propriedades cron
+
+|Ordem|Nome|Formato|
+|:-:|:-:|:-:|
+|1|Minuto|0-59|
+|2|Hora|0-23|
+|3|Mês|1-12 ou jan,fev,mar,apr,may,jun,jul,aug,sep,oct,nov,dec|
+|4|Dia da semana|0-6 ou sun,mon,tue,wed,thu,fri,sat|
+|5|Dia do Mês|1-31 ou aceita alcance ex: 1-5|
+|6|Comando|Exemplo: cp f1 f2|
+|Especial|Pode assumir qualquer valor|*|
+
+|SubComando|Função|
+|:-:|:-:|
+|crontab -e|cria nova tarefa|
+|crontab -l|lista de tarefas|
+|crontab -r|remove tarefa|
+
+---
+
+##### Diretórios
+
+|Nome|Função|
+|:-:|:-:|
+|/bin|Comandos utilizados durante o boot e por utilizadores comuns.|
+|/boot|Ficheiros utilizados durante a inicialização do sistema e o Kernel.|
+|/dev|Dispositivos (modem, mouse, teclado, etc..).|
+|/etc|Ficheiros de configurações do sistema.|
+|/home|Diretório HOME dos utilizadores comuns.|
+|/proc|Sistema de ficheiros virtual (na memória) com dados do Kernel.|
+|/root|Diretório HOME do Superuser (Super Utilizador).|
+|/usr|Contém ficheiros de todos os programas e bibliotecas para o uso dos utilizadores do Linux.|
+|/var|Contém ficheiros que são modificados com o decorrer do uso do sistema (e-mail , temporários, filas de impressão, manuais).|
+
+---
+
+##### Processos
+
+|Nome|Processo|
+|:-:|:-:|
+|0|Boot|
+|1|Processo na memória|
+|2|Processo do Sistema|
+|10|Processo Pemutado|
+|ADDR|Address da Memória|
+|B|Waiting|
+|f|	lista completa acerca dos processos|
+|Getty|Process daemon login|
+|Init|Process daemon (arranque Sistema Boot)|
+|pid|process identification|
+|ppid|Process Parent Identification|
+|R|Running|
+|S|Sleeping|
+|sched|escala os processos|
+|sort|ordenar dados|
+|Swapper|Troca de Processos|
+|SZ|Tamanho do Bloco|
+|T|Stopped|
+|TIME|quantidade de tempo do CPU o processo usou. Caso aparecer 0,0 tava a ser usado|
+|tty|num de terminal|
+|?||sistema|
