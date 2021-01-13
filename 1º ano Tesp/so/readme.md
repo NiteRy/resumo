@@ -466,10 +466,9 @@ BUS (inglês). Elas comunicam entre si, sob controlo de sinais (Read, Write, etc
 
 ---
 
-2. CPU – Unidade Central de Processamento
-É constituída minimamente pelos seguintes componentes:
+2. CPU – Unidade Central de Processamento: constituída minimamente pelos seguintes componentes:
 
-1. Unidade de Controlo (UC):
+2.1 Unidade de Controlo (UC):
 
 - Controla a execução das instruções do programa;
 
@@ -477,198 +476,85 @@ BUS (inglês). Elas comunicam entre si, sob controlo de sinais (Read, Write, etc
 
 - Controla as transferências de dados (memória central/memória auxiliar e memória central/unidade aritmética e lógica).
 
-2. Unidade Aritmética e Lógica (ALU – Arithmetic Logic Unit):
+2.2 Unidade Aritmética e Lógica (ALU – Arithmetic Logic Unit):
 
 - Executa as operações aritméticas e lógicas através de registos (pequena área de memória, onde cabem 8 a 64 bits, utilizada em todas as operações efetuadas no interior
 do microprocessador (CPU));
 
-- Tratamento de Interrupções – CPU e Interrupt Controlar:  Uma das atividades principais da CPU, juntamente com o Controlador de
-Interrupções, é o Controlo e Tratamento de Interrupções, a ser analisada brevemente.
+- Tratamento de Interrupções – CPU e Interrupt Controlar:  Uma das atividades principais da CPU, juntamente com o Controlador de interrupções, é o Controlo e Tratamento de Interrupções, a ser analisada brevemente.
+
+![Sistema](img/proc.png)
 
 ---
 
 3. Chipset: componente que se divide em 2 partes: a Ponte norte (north bridge) que comunica com o processador e controla a memória e a Ponte sul (south bridge) que comunica com os periféricos, entradas (por exemplo SATA) e as portas (exemplos: USB e HDMI).
 
----
-
-4. Memórias
-São todos os dispositivos que permitem a um computador guardar dados,
-temporária ou permanentemente.
-
-- RAM
-Memória de trabalho onde são armazenados os programas e os dados que
-intervêm no processamento do computador. A sua capacidade de
-armazenamento determina a extensão dos dados e programas que podem
-residir na memória durante a execução dos programas.
-
-- ROM
-Memória permanente do computador onde estão inscritas as rotinas
-básicas de software necessárias ao arranque do computador e ao teste dos
-vários dispositivos do hardware. Um dos componentes mais importantes da
-ROM é a BIOS, conjunto de programas que viabilizam a ligação do software
-com o hardware.
-
-- CACHE
-É uma memória muito rápida que desempenha o papel de intermediária
-entre a memória RAM e o processador. Nesta memória, são armazenadas 
-as instruções utilizadas com mais frequência. Pode aumentar
-significativamente o desempenho global do sistema.
-
-
-# RAM:
-Tipos:
-• SRAM - Static RAM 
-Pequena, cara, rápida e de fabrico à base de transístores.
-Aplica técnicas que tornam os acessos aos dados de uma forma
-mais rápida, aumentando assim o desempenho do
-computador.
-
-
-”.
-## DRAM - Dynamic RAM (RAM Geral)
-Vasta, barata, lenta e de fabrico normalmente à base de
-condensadores.
-
-### Tipo popular de DRAM:
-SDRAM – Synchronous Dynamic RAM
-É sincronizada com o Barramento do Sistema.
-Mais exatamente, é regulada com as transições do
-Clock (Relógio) do Sistema.
-Permite assim uma operação (leitura, escrita) regulada
-e justa.
-
-### Tipos de SDRAM:
-SDR SDRAM:
-Single Data Rate SDRAM
-DDR1, DDR.
-DDR SDRAM:
-Double Data Rate SDRAM
-DDR2, DDR3
-
-
-
-# ROM:
-
-## PROM
-Programmable Read Only Memory
-Podem ser gravadas através de dispositivos especiais, mas
-não podem ser mais apagadas ou alteradas.
-
-## EPROM
-Erasable Programmable Read Only Memory
-Podem ser apagadas através de raios ultravioleta permitindo
-assim a sua reutilização.
-
-## EEPROM
-Electrically Erasable Programmable Read Only Memory
-Podem alterar o seu conteúdo eletricamente, mesmo quando
-após o seu funcionamento.
-
-## FLASH
-É uma memória semelhante à RAM, mas não é volátil.
-É uma memória de Leitura e Escrita.
-Combina assim as capacidades da ROM e da RAM.
-É uma memória cara e veloz.
-É usada, por exemplo, em:
-Pen Drives,
-MP3 Players Audio,
-PDAs – Personal Digital Assistant (computadores
-pequenos tipo agendas),
-Telemóveis, etc.
-
-# cache
-
-### Cache com Níveis:
-Com a evolução na velocidade dos dispositivos, em particular
-nos processadores, a cache foi dividida em níveis, já que a
-demanda de velocidade a memória é tão grande que são
-necessários caches grandes com velocidades altíssimas de
-transferência e baixas latências. Sendo muito difícil e caro
-construir memórias caches com essas características, elas são
-construídas em níveis que se diferem na relação tamanho X
-desempenho.
-
-#### Cache L1
-Uma pequena porção de memória estática presente dentro do
-processador. Em alguns tipos de processador, como o Pentium
-2, o L1 é dividido em dois níveis: dados e instruções (que
-"dizem" o que fazer com os dados). O primeiro processador da
-Intel a ter o cache L1 foi o i486 com 8KB. Geralmente tem entre
-16KB e 128KB; hoje já encontramos processadores com até
-16MB de cache.
-
-#### Cache L2
-Possuindo a Cache L1 um tamanho reduzido e não
-apresentando uma solução ideal, foi desenvolvida a cache L2,
-que contém muito mais memória que a cache L1. Ela é mais um
-caminho para que a informação requisitada não tenha que ser
-procurada na lenta memória principal. Alguns processadores
-colocam esse cache fora do processador, por questões
-económicas, pois uma cache grande implica num custo grande,
-mas há exceções, como no Pentium II, por exemplo, cujas
-caches L1 e L2 estão no mesmo cartucho, que está o
-processador. A memória cache L2 é, sobretudo, um dos
-elementos essenciais para um bom rendimento do
-processador mesmo que tenha um clock baixo. Um exemplo
-prático é o caso do Intel Itanium 9152M (para servidores) que
-tem apenas 1.6 GHz de clock interno e ganha de longe do atual
-Intel Extreme, pelo fato de possuir uma memória cache de
-24MB. Quanto mais alto é o clock do processador, mais este
-aquece e mais instável se torna. Os processadores Intel Celeron
-têm um fraco desempenho por possuir menos memória cache
-L2. Um Pentium M 730 de 1.6 GHz de clock interno, 533 MHz
-FSB e 2 MB de cache L2, tem rendimento semelhante a um Intel
-Pentium 4 2.4 GHz, aquece muito menos e torna-se muito mais
-estável e bem mais rentável do que o Intel Celeron M 440 de
-1.86 GHz de clock interno, 533 MHz FSB e 1 MB de cache L2.
-
-#### Cache L3
-Terceiro nível de cache de memória. Inicialmente utilizado pelo
-AMD K6-III (por apresentar o cache L2 integrado ao seu núcleo)
-utilizava o cache externo presente na placa-mãe como uma
-memória de cache adicional. Ainda é um tipo de cache raro
-devido a complexidade dos processadores atuais, com suas
-áreas chegando a milhões de transístores por micrómetros ou 
-6
-nanómetros de área. Ela será muito útil, é possível a
-necessidade futura de níveis ainda mais elevados de cache,
-como L4 e assim por diante
+![Sistema](img/chip.png)
 
 ---
 
-5. Controladores I/O (Input/Output – Entrada/Saída)
-• Um controlador é um interface, parte hardware e parte
-software, entre a CPU e um dispositivo periférico, como, por
-exemplo, o disco rígido, um teclado ou um monitor de vídeo.
-São assim programas e circuitos de hardware (drivers) responsáveis pela
-comunicação entre o sistema operativo do computador e o hardware ligado
-a ele.
-Além disto, combinam as velocidades entre os dispositivos que operam em
-velocidades diferentes, já que os periféricos são consideravelmente mais
-lentos do que a CPU na transferência de dados.
+4. Memórias: todos os dispositivos que permitem a um computador guardar dados, temporária ou permanentemente. Eis os 3 tipos de memória:
+
+- RAM (Random Access Memory): memória de trabalho onde são armazenados os programas e os dados que intervêm no processamento do computador. A sua capacidade de armazenamento determina a extensão dos dados e programas que podem residir na memória durante a execução dos programas. Eis os 2 tipos:
+
+1. SRAM (Static RAM): Pequena, cara, rápida e de fabrico à base de transístores. Aplica técnicas que tornam os acessos aos dados de uma forma
+mais rápida, aumentando assim o desempenho do computador. Eis os exemplos: 
+
+- SDR (Single Data Rate SDRAM);
+
+- DDR (Double Data Rate);
+
+
+2. DRAM (Dynamic RAM): Vasta, barata, lenta e de fabrico normalmente à base de condensadores. Um exemplo é SDRAM (Synchronous Dynamic), que sincroniza com o Barramento do Sistema. Permite assim uma operação (leitura, escrita) regulada e justa.
+
+![Sistema](img/ram.png)
 
 ---
 
-6. Registos e Circuitos de Apoio
-Entre os diversos componentes do computador, existem registos, que
-funcionam como memórias auxiliares, e circuitos eletrónicos necessários à
-boa condução dos dados, endereços e sinais.
+- ROM (Read Only Memory): memória permanente do computador onde estão inscritas as rotinas básicas de software necessárias ao arranque do computador e ao teste dos vários dispositivos do hardware. Um dos componentes mais importantes da ROM é a BIOS, conjunto de programas que viabilizam a ligação do software com o hardware. Eis os tipos de ROM:
+
+1. PROM (Programmable Read Only Memory): podem ser gravadas através de dispositivos especiais, mas não podem ser mais apagadas ou alteradas;
+
+2. EPROM (Erasable Programmable Read Only Memory): podem ser apagadas através de raios ultravioleta permitindo assim a sua reutilização;
+
+3. EEPROM (Electrically Erasable Programmable Read Only Memory): podem alterar o seu conteúdo eletricamente, mesmo quando após o seu funcionamento;
+
+4. Flash: memória de Leitura e Escrita. Combina assim as capacidades da ROM e da RAM. É cara mas veloz e é usada em: Pen Drives, MP3 Players Audio, PDAs – Personal Digital Assistant (computadores pequenos tipo agendas), Telemóveis, etc.
+
+![Sistema](img/rom.png)
 
 ---
 
-7. Estruturas de Interconexão – Barramentos - BUSes
-As estruturas de interconexão, conhecidas também por barramentos ou
-por BUSes (do inglês BUS) são as vias de interligação entre os componentes.
-Agrupam-se principalmente em três categorias:
-• Dados (Barramento de Dados – Data Bus)
-É a via destinada à transmissão dos dados entre os componentes do
-computador, tanto enviados quanto recebidos.
-• Endereços (Barramento de Endereços – Address Bus)
-Designa o endereço físico de um componente ou uma posição de memória.
-• Controle (Barramento de Controle – Control Bus)
-Constituem os sinais de controle que regulam e controlam todas as
-atividades do computador. Por exemplo, o sinal Read para indicar uma
-leitura de um determinado dado de memória.
+- CACHE: memória muito rápida que desempenha o papel de intermediária entre a memória RAM e o processador. Nesta memória, são armazenadas as instruções utilizadas com mais frequência. Pode aumentar significativamente o desempenho global do sistema. Existem 3 tipos de cache:
+
+1. Cache L1: pequena porção de memória estática presente dentro do processador. Em alguns tipos de processador, como o Pentium
+2, é dividido em dois níveis: dados e instruções. Geralmente tem entre 16KB e 128KB mas atualmente já têm 16MB de cache;
+
+2. Cache L2: possuindo a Cache L1 um tamanho reduzido e não apresentando uma solução ideal, foi desenvolvida a cache L2, que contém muito mais memória que a cache L1. Ela é mais um caminho para que a informação requisitada não tenha que ser procurada na lenta memória principal. Alguns processadores colocam esse cache fora do processador, por questões económicas, pois uma cache grande implica num custo grande, mas há exceções, como no Pentium II, por exemplo, cujas caches L1 e L2 estão no mesmo cartucho, que está o processador. A memória cache L2 é, sobretudo, um dos elementos essenciais para um bom rendimento do processador mesmo que tenha um clock baixo;
+
+3. Cache L3: 3º nível de cache de memória. Utiliza o cache externo presente na placa-mãe como uma memória de cache adicional, apesar de ser um tipo de cache raro devido a complexidade dos processadores atuais, com suas áreas chegando a milhões de transístores por micrómetros ou nanómetros de área. Ela será muito útil, sendo possível a necessidade futura de níveis ainda mais elevados de cache, como L4 e assim por diante.
+
+![Sistema](img/cache.png)
+
+---
+
+5. Controladores I/O (Input/Output – Entrada/Saída): interface que é tanto parte hardware como software, entre a CPU e um dispositivo periférico. Exemplos: disco rígido teclado ou monitor de vídeo. São assim programas e circuitos de hardware (drivers) responsáveis pela comunicação entre o sistema operativo do computador e o hardware ligado a ele. Além disto, combinam as velocidades entre os dispositivos que operam em velocidades diferentes, já que os periféricos são consideravelmente mais lentos do que a CPU na transferência de dados;
+
+---
+
+6. Registos e Circuitos de Apoio: entre os diversos componentes do computador, existem registos, que funcionam como memórias auxiliares e circuitos eletrónicos necessários à boa condução dos dados, endereços e sinais;
+
+---
+
+7. Estruturas de Interconexão – Barramentos - BUSes: vias de interligação entre os componentes. Agrupam-se principalmente em três categorias:
+
+1. Dados (Barramento de Dados – Data Bus) É a via destinada à transmissão dos dados entre os componentes do computador, tanto enviados quanto recebidos;
+
+2. Endereços (Barramento de Endereços – Address Bus) Designa o endereço físico de um componente ou uma posição de memória;
+
+3. Controle (Barramento de Controle – Control Bus) Constituem os sinais de controle que regulam e controlam todas as atividades do computador. Por exemplo, o sinal Read para indicar uma leitura de um determinado dado de memória.
+
+![Sistema](img/bus.png)
 
 ---
 
@@ -812,5 +698,3 @@ A partir da Oracle VM VirtualBox Manager, crie uma nova máquina Linux:
 21. Explore o Sitema
 
 ![Sistema](img/p25.png)
-
-
