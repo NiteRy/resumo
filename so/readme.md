@@ -1,5 +1,5 @@
 # Resumo de Sistemas Operativos
-## Diogo Chança
+
 
 ---
 
