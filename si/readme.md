@@ -1,5 +1,4 @@
 # Resumo de Sistemas de informação
-## Diogo Chança
 
 ---
 
